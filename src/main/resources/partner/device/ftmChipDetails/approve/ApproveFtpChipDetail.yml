@@ -1,0 +1,36 @@
+ApproveFtpChipDetail:
+   Partner_ApproveFtpChipDetail_All_Valid_Smoke:
+      endPoint: /v1/partnermanager/ftpchipdetail
+      role: partner
+      restMethod: patch
+      inputTemplate: partner/device/ftmChipDetails/approve/approveFtpChipDetail
+      outputTemplate: partner/device/ftmChipDetails/approve/approveFtpChipDetailResult
+      input: '{
+    "approvalStatus": true,
+    "ftpChipDetailId": "$ID:CreateFTPChipDetail_All_Valid_Smoke_sid_id$",
+    "requesttime": "$TIMESTAMP$"
+  }'
+      output: '{
+     "id": "Status updated successfully."
+    }'
+
+   Partner_ApproveFtpChipDetail_Missing_InputParameter_ftpChipDetailId:
+      endPoint: /v1/partnermanager/ftpchipdetail
+      role: partner
+      restMethod: patch
+      inputTemplate: partner/device/ftmChipDetails/approve/approveFtpChipDetail
+      outputTemplate: partner/error
+      input: '{
+    "approvalStatus": true,
+    "ftpChipDetailId": "$REMOVE$",
+    "isItForRegistrationDevice": true,
+    "requesttime": "$TIMESTAMP$"
+  }'
+      output: '{
+   "errors": [
+    {
+      "errorCode": "PMS_COR_001",
+      "message": "Invalid request parameter - value is empty or null :request.ftpChipDetailId"
+    }
+  ]
+}'

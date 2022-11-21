@@ -1,0 +1,29 @@
+SelectTenant:
+  Select_Tenant_Invalid_Partner:
+      endPoint: /v2/api/SelectTenant
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/SelectTenant/selecttenant
+      outputTemplate: idRepository/SelectTenant/selecttenantResult
+      input: '  {
+    "countryName": "India",
+    "partnerName": "testp"
+  
+}'
+      output: '{
+  "response":"Invalid Partnername"
+}'
+  Select_Tenant_Invalid_Country:
+      endPoint: /v2/api/SelectTenant
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/SelectTenant/selecttenant
+      outputTemplate: idRepository/SelectTenant/selecttenantResult
+      input: '  {
+    "countryName": "Eng",
+    "partnerName": "testp0"
+  
+}'
+      output: '{
+  "response":"Invalid Countryrname"
+}'

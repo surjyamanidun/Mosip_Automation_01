@@ -1,0 +1,137 @@
+UpdatePartner:
+  UpdatePartner:
+      endPoint: /api/Partner
+      role: idm
+      restMethod: put
+      inputTemplate: idRepository/UpdatePartner/updatepartner
+      outputTemplate: idRepository/UpdatePartner/updatepartnerResult
+      input: '{
+       "address": "update",
+    "contactNumber": "9951616540",
+    "state": "ap",
+    "locality": "ap",
+    "organizationName": "update",
+    "commonName": "update"
+  }'
+      output: '{
+  "response":"Partner registered successfully and slot assigned in HSM"
+}'
+  UpdatePartner_existingdetails:
+      endPoint: /v2/api/Partner
+      role: idm
+      restMethod: put
+      inputTemplate: idRepository/UpdatePartner/updatepartner
+      outputTemplate: idRepository/UpdatePartner/updatepartnerResult
+      input: '{
+      "address": "update",
+    "contactNumber": "9951616540",
+    "state": "ap",
+    "locality": "ap",
+    "organizationName": "update",
+    "commonName": "update"
+  }'
+      output: '{
+  "message":"Partner details updated successfully"
+}'
+  UpdatePartner_without_entering_address_field:
+      endPoint: /v2/api/Partner
+      role: idm
+      restMethod: put
+      inputTemplate: idRepository/UpdatePartner/updatepartner
+      outputTemplate: idRepository/UpdatePartner/updatepartnerResult
+      input: '{
+      "address": "$REMOVE$",
+    "contactNumber": "9951616540",
+    "state": "ap",
+    "locality": "ap",
+    "organizationName": "update",
+    "commonName": "update"
+  }'
+      output: '{
+  "message":""
+}'
+  Updatepartner_without_entering_contactnumber_field:
+      endPoint: /v2/api/Partner
+      role: idm
+      restMethod: put
+      inputTemplate: idRepository/UpdatePartner/updatepartner
+      outputTemplate: idRepository/UpdatePartner/updatepartnerResult
+      input: '{
+       "address": "update",
+    "contactNumber": "$REMOVE$",
+    "state": "ap",
+    "locality": "ap",
+    "organizationName": "update",
+    "commonName": "update"
+  }'
+      output: '{
+  "message":""
+}'
+  Update_partner_entering_invalid_contactnumber:
+      endPoint: /v2/api/Partner
+      role: idm
+      restMethod: put
+      inputTemplate: idRepository/UpdatePartner/updatepartner
+      outputTemplate: idRepository/UpdatePartner/updatepartnerResult
+      input: '{
+      "address": "update",
+    "contactNumber": "9951",
+    "state": "ap",
+    "locality": "ap",
+    "organizationName": "update",
+    "commonName": "update"
+  }'
+      output: '{
+  "message":""
+}'
+  Updatepartner_without_entering_Organization_name:
+      endPoint: /v2/api/Partner
+      role: idm
+      restMethod: put
+      inputTemplate: idRepository/UpdatePartner/updatepartner
+      outputTemplate: idRepository/UpdatePartner/updatepartnerResult
+      input: '{
+       "address": "update",
+    "contactNumber": "9951616540",
+    "state": "ap",
+    "locality": "ap",
+    "organizationName": "$REMOVE$",
+    "commonName": "update"
+  }'
+      output: '{
+  "message":""
+}'
+  Updatepartner_Without_entering_commonname:
+      endPoint: /v2/api/Partner
+      role: idm
+      restMethod: put
+      inputTemplate: idRepository/UpdatePartner/updatepartner
+      outputTemplate: idRepository/UpdatePartner/updatepartnerResult
+      input: '{
+      "address": "update",
+    "contactNumber": "9951616540",
+    "state": "ap",
+    "locality": "ap",
+    "organizationName": "update",
+    "commonName": "$REMOVE$"
+  }'
+      output: '{
+  "message":""
+}'
+  Updatepartner_Without_entering_locality_and_state:
+      endPoint: /v2/api/Partner
+      role: idm
+      restMethod: put
+      inputTemplate: idRepository/UpdatePartner/updatepartner
+      outputTemplate: idRepository/UpdatePartner/updatepartnerResult
+      input: '{
+      "address": "update",
+    "contactNumber": "9951616540",
+    "state": "$REMOVE$",
+    "locality": "$REMOVE$",
+    "organizationName": "update",
+    "commonName": "update"
+  }'
+      output: '{
+  "message":""
+}'

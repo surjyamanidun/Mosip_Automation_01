@@ -1,0 +1,19 @@
+DeviceDetails:
+  CreateDevice_Details :
+      endPoint: /api/DeviceDetail
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/DeviceDetails/devicedetail
+      outputTemplate: idRepository/DeviceDetails/devicedetailResult
+      input: '{
+     "deviceModelId": "98",
+    "name": "check11234755",
+    "validityDateTime": "string",
+    "serialNum": "122434",
+    "isActive": true,
+    "isItForRegistration": true
+  
+  }'
+      output: '{
+  "message": "string"
+}'

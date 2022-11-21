@@ -1,0 +1,10 @@
+{
+  "id": "string",
+  "version": "string",
+  "requesttime": "string",
+  "metadata": "",
+  "request": {
+    "username": "admin",
+    "password": "Techno@123"
+  }
+}

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Idrepository Suite">
+	<!-- Passing Group as parmeter unsing "testType" Possible Groups are: smoke 
+		regression smokeAndRegression -->
+	<listeners>
+		<listener class-name="io.mosip.report.CustomTestNGReporter" />
+		<listener
+			class-name="io.mosip.authentication.fw.util.AuthenticationTestsListener" />
+		<listener class-name="io.mosip.authentication.e2e.E2EReport" />
+	</listeners>
+	
+<!-- 	<test name="RegisterUser">
+		<parameter name="ymlFile"	value="idRepository\RegisterUser\Devicemanager.yml" />	    
+	<classes>
+		<class name="io.mosip.testscripts.SimplePost" />
+	</classes>
+	</test>
+	<test name="Changepassword">
+		<parameter name="ymlFile"	value="idRepository\Changepsw\CreateVid.yml" />	    
+	<classes>
+		<class name="io.mosip.testscripts.SimplePost" />
+	</classes>
+	</test> -->
+<!-- 	<test name="logout">
+		<parameter name="ymlFile"	value="idRepository\Logout\Logout.yml" />	    
+	<classes>
+		<class name="io.mosip.testscripts.SimplePost" />
+	</classes>
+	</test>	
+	<test name="CreateRole">
+		<parameter name="ymlFile"	value="idRepository\CreateRole\CreateRole.yml" />	    
+	<classes>
+		<class name="io.mosip.testscripts.SimplePost" />
+	</classes>
+	</test>	
+	<test name="PartnerManager">
+		<parameter name="ymlFile"	value="idRepository\Createpartner\Createpartner.yml" />	   
+	<classes>
+		<class name="io.mosip.testscripts.SimplePost" />
+	</classes>
+	</test>	
+	
+	<test name="UpdatePartnerManager">
+		<parameter name="ymlFile"	value="idRepository\UpdatePartner\UpdatePartner.yml" />	   
+	<classes>
+		<class name="io.mosip.testscripts.SimplePut" />
+	</classes>
+	</test>	
+	
+	<test name="DeviceManager">		
+		<parameter name="ymlFile"	value="idRepository\DeviceManager\DeviceManager.yml" />
+	<classes>	
+		<class name="io.mosip.testscripts.SimplePost" />
+	</classes>
+	</test>
+	<test name="UpdateDeviceManager">
+		<parameter name="ymlFile"	value="idRepository\DeviceManager\UpdateDeviceModel.yml" />	   
+	<classes>	
+		<class name="io.mosip.testscripts.SimplePost" />
+	</classes>
+	</test> -->	
+	<!--		<test name="Config">
+		<parameter name="ymlFile"	value="idRepository\Config\DeviceDetail.yml" />	   
+	<classes>	
+		<class name="io.mosip.testscripts.SimplePost" />
+	</classes>
+	</test>	
+	<test name="Cirtificate">
+		<parameter name="ymlFile"	value="idRepository\Certificate\CreateRole.yml" />	    
+	<classes>
+		<class name="io.mosip.testscripts.SimplePost" />
+	</classes>
+	</test> -->
+	
+	<test name="RegisterUser">
+		<parameter name="ymlFile"	value="idRepository\RegisterUser\Devicemanager.yml" />	    
+	<classes>
+		<class name="io.mosip.testscripts.SimplePostForSelectTenant" />
+	</classes>
+	</test>
+	<test name="CreateRole">
+		<parameter name="ymlFile"	value="idRepository\CreateRole\CreateRole.yml" />	    
+	<classes>
+		<class name="io.mosip.testscripts.SimplePostForSelectTenant" />
+	</classes>
+	</test>	
+	
+	<test name="Changepassword">
+		<parameter name="ymlFile"	value="idRepository\Changepsw\CreateVid.yml" />	    
+	<classes>
+		<class name="io.mosip.testscripts.SimplePostForSelectTenant" />
+	</classes>
+	</test>
+	
+	
+	<test name="SelectTenant">		
+	    <parameter name="ymlFile"	
+		value="idRepository\SelectTenant\SelectTenant.yml" />		
+	<classes>
+		<class name="io.mosip.testscripts.SimplePostForSelectTenant" />
+	</classes>
+	</test>
+	
+	<test name="PartnerManager">
+		<parameter name="ymlFile"	value="idRepository\Createpartner\Createpartner.yml" />	   
+	<classes>
+		<class name="io.mosip.testscripts.SimplePostWithSession" />
+	</classes>
+	</test>	
+	
+	<test name="UpdatePartnerManager">
+		<parameter name="ymlFile"	value="idRepository\UpdatePartner\UpdatePartner.yml" />	   
+	<classes>
+		<class name="io.mosip.testscripts.SimplePut" />
+	</classes>
+	</test>	
+	
+	<test name="DeviceManager">		
+		<parameter name="ymlFile"	value="idRepository\DeviceManager\DeviceManager.yml" />
+	<classes>	
+		<class name="io.mosip.testscripts.SimplePostWithSession" />
+	</classes>
+	</test>
+	
+	<test name="DeviceDetails">
+		<parameter name="ymlFile"	value="idRepository\DeviceDetails\DeviceDetail.yml" />	   
+	<classes>	
+		<class name="io.mosip.testscripts.SimplePostWithSession" />
+	</classes>
+ 	</test>	
+
+</suite>

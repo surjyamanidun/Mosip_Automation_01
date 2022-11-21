@@ -1,0 +1,267 @@
+PartnerManager:
+  Create_partner:
+      endPoint: /v2/api/Partner
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Createpartner/createpartner
+      outputTemplate: idRepository/Createpartner/createpartnerResult
+      input: '{
+    "countryId": 1,
+    "userName": "testp087",
+    "partnerName": "testp70",
+    "address": "address",
+    "contactNumber": "9951616549",
+    "emailId": "testp070@gmail.com",
+    "state": "kar",
+    "locality": "blr",
+    "organizationName": "testp0",
+    "commonName": "testp0",
+    "isActive": true
+  }'
+      output: '{
+  "message":"Username testu0 is already taken., Email testp0@gmail.com is already taken."
+}'
+  Create_partner_Existing_Details:
+      endPoint: /v2/api/Partner
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Createpartner/createpartner
+      outputTemplate: idRepository/Createpartner/createpartnerResult
+      input: '{
+    "countryId": 1,
+    "userName": "testu0",
+    "partnerName": "testp0",
+    "address": "address",
+    "contactNumber": "9951616549",
+    "emailId": "testp0@gmail.com",
+    "state": "kar",
+    "locality": "blr",
+    "organizationName": "testp0",
+    "commonName": "testp0",
+    "isActive": true
+  }'
+      output: '{
+  "message":"Username testu0 is already taken., Email testp0@gmail.com is already taken."
+}'
+  Create_partner_with_existing_username:
+      endPoint: /v2/api/Partner
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Createpartner/createpartner
+      outputTemplate: idRepository/Createpartner/createpartnerResult
+      input: '{
+    "countryId": 1,
+    "userName": "testu0",
+    "partnerName": "testp0",
+    "address": "address",
+    "contactNumber": "9951616549",
+    "emailId": "testp09@gmail.com",
+    "state": "kar",
+    "locality": "blr",
+    "organizationName": "testp0",
+    "commonName": "testp0",
+    "isActive": true
+  }'
+      output: '{
+  "message":"Username testu0 is already taken., Email testp0@gmail.com is already taken."
+}'
+  CreatePartner_with_existing_mail:
+      endPoint: /v2/api/Partner
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Createpartner/createpartner
+      outputTemplate: idRepository/Createpartner/createpartnerResult
+      input: '{
+    "countryId": 1,
+    "userName": "testu019",
+    "partnerName": "testp0",
+    "address": "address",
+    "contactNumber": "9951616549",
+    "emailId": "testp0@gmail.com",
+    "state": "kar",
+    "locality": "blr",
+    "organizationName": "testp0",
+    "commonName": "testp0",
+    "isActive": true
+  }'
+      output: '{
+  "message":"Username testu0 is already taken., Email testp0@gmail.com is already taken."
+}'
+  CreatePartner_with_existing_partner_name:
+      endPoint: /v2/api/Partner
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Createpartner/createpartner
+      outputTemplate: idRepository/Createpartner/createpartnerResult
+      input: '{
+    "countryId": 1,
+    "userName": "testu0199",
+    "partnerName": "testp0",
+    "address": "address",
+    "contactNumber": "9951616549",
+    "emailId": "testp01@gmail.com",
+    "state": "kar",
+    "locality": "blr",
+    "organizationName": "testp0",
+    "commonName": "testp0",
+    "isActive": true
+  }'
+      output: '{
+  "message":"Username testu0 is already taken., Email testp0@gmail.com is already taken."
+}'
+  CreatePartner_without_enetring_username_field:
+      endPoint: /v2/api/Partner
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Createpartner/createpartner
+      outputTemplate: idRepository/Createpartner/createpartnerResult
+      input: '{
+    "countryId": 1,
+    "userName": "$REMOVE$",
+    "partnerName": "testp2",
+    "address": "address",
+    "contactNumber": "9951616549",
+    "emailId": "testp01@gmail.com",
+    "state": "kar",
+    "locality": "blr",
+    "organizationName": "testp2",
+    "commonName": "testp2",
+    "isActive": true
+  }'
+      output: '{
+  "message":"Username testu0 is already taken., Email testp0@gmail.com is already taken."
+}'
+  CreatePartner_without_entering_partner_name_field :
+      endPoint: /v2/api/Partner
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Createpartner/createpartner
+      outputTemplate: idRepository/Createpartner/createpartnerResult
+      input: '{
+    "countryId": 1,
+    "userName": "testu2",
+    "partnerName": "$REMOVE$",
+    "address": "address",
+    "contactNumber": "9951616549",
+    "emailId": "testp01@gmail.com",
+    "state": "kar",
+    "locality": "blr",
+    "organizationName": "testp2",
+    "commonName": "testp2",
+    "isActive": true
+  }'
+      output: '{
+  "message":"Username testu0 is already taken., Email testp0@gmail.com is already taken."
+}'
+  CreatePartner_Without_entering_address_field :
+      endPoint: /v2/api/Partner
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Createpartner/createpartner
+      outputTemplate: idRepository/Createpartner/createpartnerResult
+      input: '{
+    "countryId": 1,
+    "userName": "testu2",
+    "partnerName": "testp2",
+    "address": "$REMOVE$",
+    "contactNumber": "9951616549",
+    "emailId": "testp01@gmail.com",
+    "state": "kar",
+    "locality": "blr",
+    "organizationName": "testp2",
+    "commonName": "testp2",
+    "isActive": true
+  }'
+      output: '{
+  "message":"Username testu0 is already taken., Email testp0@gmail.com is already taken."
+}'
+  CreatePartner_Without_entering_contactnumber _field :
+      endPoint: /v2/api/Partner
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Createpartner/createpartner
+      outputTemplate: idRepository/Createpartner/createpartnerResult
+      input: '{
+    "countryId": 1,
+    "userName": "testu2",
+    "partnerName": "testp2",
+    "address": "address",
+    "contactNumber": "$REMOVE$",
+    "emailId": "testp01@gmail.com",
+    "state": "kar",
+    "locality": "blr",
+    "organizationName": "testp2",
+    "commonName": "testp2",
+    "isActive": true
+  }'
+      output: '{
+  "message":"Username testu0 is already taken., Email testp0@gmail.com is already taken."
+}'
+  CreatePartner_entering_invalid_contactnumber :
+      endPoint: /v2/api/Partner
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Createpartner/createpartner
+      outputTemplate: idRepository/Createpartner/createpartnerResult
+      input: '{
+    "countryId": 1,
+    "userName": "testu2",
+    "partnerName": "testp2",
+    "address": "address",
+    "contactNumber": "9951t",
+    "emailId": "testp01@gmail.com",
+    "state": "kar",
+    "locality": "blr",
+    "organizationName": "testp2",
+    "commonName": "testp2",
+    "isActive": true
+  }'
+      output: '{
+  "message":"Username testu0 is already taken., Email testp0@gmail.com is already taken."
+}'
+  CreatePartner_without_entering_Email_id_field :
+      endPoint: /v2/api/Partner
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Createpartner/createpartner
+      outputTemplate: idRepository/Createpartner/createpartnerResult
+      input: '{
+    "countryId": 1,
+    "userName": "testu2",
+    "partnerName": "testp21",
+    "address": "address",
+    "contactNumber": "9951616549",
+    "emailId": "$REMOVE$",
+    "state": "kar",
+    "locality": "blr",
+    "organizationName": "testp2",
+    "commonName": "testp2",
+    "isActive": true
+  }'
+      output: '{
+  "message":"The EmailId field is required."
+}'
+  CreatePartner_without_entering_commonname_field :
+      endPoint: /v2/api/Partner
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Createpartner/createpartner
+      outputTemplate: idRepository/Createpartner/createpartnerResult
+      input: '{
+    "countryId": 1,
+    "userName": "testu0",
+    "partnerName": "testp0",
+    "address": "address",
+    "contactNumber": "9951616549",
+    "emailId": "testp0@gmail.com",
+    "state": "kar",
+    "locality": "blr",
+    "organizationName": "testp0",
+    "commonName": "$REMOVE$",
+    "isActive": true
+  }'
+      output: '{
+  "message":"Username testu0 is already taken., Email testp0@gmail.com is already taken."
+}'
+
+ 

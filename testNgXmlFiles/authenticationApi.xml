@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="AuthenticationTest Suite">
+	<!-- Passing Group as parmeter unsing "testType" Possible Groups are: smoke 
+		regression smokeAndRegression -->
+	<listeners>
+		<listener class-name="io.mosip.report.CustomTestNGReporter" />
+		<listener
+			class-name="io.mosip.authentication.fw.util.AuthenticationTestsListener" />
+		<listener class-name="io.mosip.authentication.e2e.E2EReport" />
+	</listeners>
+
+	<test name="AddIdentity">
+		<parameter name="ymlFile"
+			value="ida\AddIdentity\AddIdentity.yml" />
+		<classes>
+			<class name="io.mosip.testscripts.AddIdentity" />
+		</classes>
+	</test>
+
+	 <test name="GenerateVID">
+		<parameter name="ymlFile"
+			value="ida/GenerateVID/createGenerateVID.yml" />
+		<parameter name="idKeyName" value="vid" />
+		<classes>
+			<class
+				name="io.mosip.testscripts.PostWithAutogenIdWithOtpGenerate" />
+		</classes>
+	</test>
+
+	<test name="BioAuth">
+		<parameter name="ymlFile" value="ida/BioAuth/BioAuth.yml" />
+		<parameter name="isInternal" value="false" />
+		<classes>
+			<class name="io.mosip.testscripts.BioAuth" />
+		</classes>
+	</test>
+
+	<test name="EkycBio">
+		<parameter name="ymlFile" value="ida/EkycBio/EkycBio.yml" />
+		<parameter name="isInternal" value="false" />
+		<classes>
+			<class name="io.mosip.testscripts.BioAuth" />
+		</classes>
+	</test>
+
+	<test name="OtpAuth">
+		<parameter name="ymlFile" value="ida/OtpAuth/OtpAuth.yml" />
+		<parameter name="isInternal" value="false" />
+		<classes>
+			<class name="io.mosip.testscripts.OtpAuth" />
+		</classes>
+	</test>
+
+	<test name="EkycOtp">
+		<parameter name="ymlFile" value="ida/EkycOtp/EkycOtp.yml" />
+		<parameter name="isInternal" value="false" />
+		<classes>
+			<class name="io.mosip.testscripts.OtpAuth" />
+		</classes>
+	</test>
+
+	<test name="DemoAuth">
+		<parameter name="ymlFile" value="ida/DemoAuth/DemoAuth.yml" />
+		<classes>
+			<class name="io.mosip.testscripts.DemoAuth" />
+		</classes>
+	</test>
+
+	<test name="MultiFactorAuth">
+		<parameter name="ymlFile"
+			value="ida/MultiFactorAuth/MultiFactorAuth.yml" />
+		<classes>
+			<class name="io.mosip.testscripts.MultiFactorAuth" />
+		</classes>
+	</test>
+
+<test name="AuthTransaction">
+		<parameter name="ymlFile" value="ida/AuthTransaction/AuthTransaction.yml" />
+		<classes>
+			<class name="io.mosip.testscripts.GetWithParam" />
+		</classes>
+	</test> 
+
+
+
+	<!-- <test name="BioInternalAuth"> <parameter name="ymlFile" value="ida/BioInternalAuth/BioInternalAuth.yml" 
+		/> <parameter name="isInternal" value="true" /> <classes> <class name="io.mosip.testscripts.BioAuth" 
+		/> </classes> </test> <test name="OtpInternalAuth"> <parameter name="ymlFile" 
+		value="ida/OtpInternalAuth/OtpInternalAuth.yml" /> <parameter name="isInternal" 
+		value="true" /> <classes> <class name="io.mosip.testscripts.OtpAuth" /> </classes> 
+		</test> -->
+
+
+
+</suite>

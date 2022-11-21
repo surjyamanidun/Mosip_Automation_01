@@ -1,0 +1,19 @@
+UpdateDeviceModel:
+  UpdateDevice_Model:
+      endPoint: /api/DeviceModel
+      role: idm
+      restMethod: put
+      inputTemplate: idRepository/DeviceManager/devicemanager
+      outputTemplate: idRepository/DeviceManager/devicemanagerResult
+      input: '{
+    "id": "India",
+    "deviceTypeCode": "face",
+    "deviceSubTypeCode": "full face",
+    "make": "make",
+    "model": "model"
+  
+  }'
+      output: '{
+  "message": ""
+}'
+ 

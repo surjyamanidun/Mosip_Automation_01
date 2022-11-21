@@ -1,0 +1,18 @@
+AuthInternalLock:
+  IdRepository_AuthInternalLock_Smoke_Pos:
+      endPoint: /idrepository/v1/identity/authtypes/status
+      role: idrepo
+      restMethod: post
+      inputTemplate: idRepository/AuthInternalLock/authInternalLock
+      outputTemplate: idRepository/AuthInternalLock/authInternalLockResult
+      input: '{
+    "individualId": "$ID:AddIdentity_withValidParameters_smoke_Pos_UIN$",
+    "individualIdType": "UIN",
+    "authType": "Bio",
+    "authSubType": "Iris",
+    "locked": false,
+    "unlockForSeconds": 0
+}'
+      output: '{
+    "responsetime": "$IGNORE$"
+}'

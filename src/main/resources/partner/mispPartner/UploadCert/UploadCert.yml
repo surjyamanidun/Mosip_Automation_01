@@ -1,0 +1,14 @@
+UploadPartnerCert:
+   Partner_UploadCert_All_Valid_Smoke:
+      endPoint: /v1/partnermanager/partners/certificate/upload
+      role: partner
+      restMethod: put
+      inputTemplate: partner/mispPartner/UploadCert/uploadCert
+      outputTemplate: partner/mispPartner/UploadCert/uploadCertResult
+      input: '{
+  "partnerId": "MISP",
+  "requesttime": "$TIMESTAMP$"
+}'
+      output: ' {
+  "errors": "$IGNORE$"
+}'   

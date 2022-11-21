@@ -1,0 +1,194 @@
+DeviceManager:
+  Select_Tenant:
+      endPoint: /v2/api/SelectTenant
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/SelectTenant/selecttenant
+      outputTemplate: idRepository/SelectTenant/
+      input: '  {
+    "countryName": "India",
+    "partnerName": "testp0"
+  
+}'
+      output: '{
+  "message":"Invalid Partner"
+}'
+  Create_Device_Model:
+      endPoint: /api/DeviceModel
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/DeviceManager/devicemanager
+      outputTemplate: idRepository/DeviceManager/devicemanagerResult
+      input: '{
+    "id": "string",
+    "deviceTypeCode": "face",
+    "deviceSubTypeCode": "full face",
+    "make": "make",
+    "model": "model"
+  
+  }'
+      output: '{
+  "message": "Tenant not selected"
+}'
+  CreateDevice_Model_Existing_details :
+      endPoint: /api/DeviceModel
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/DeviceManager/devicemanager
+      outputTemplate: idRepository/DeviceManager/devicemanagerResult
+      input: '{
+    "id": "string",
+    "deviceTypeCode": "face",
+    "deviceSubTypeCode": "full face",
+    "make": "make",
+    "model": "model"
+  
+  }'
+      output: '{
+  "message": "Tenant not selected"
+}'
+  CreateDevice_Model_Enter_invaliddevice_type_code :
+      endPoint: /api/DeviceModel
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/DeviceManager/devicemanager
+      outputTemplate: idRepository/DeviceManager/devicemanagerResult
+      input: '{
+    "deviceTypeCode": "hands",
+    "deviceSubTypeCode": "full face",
+    "make": "make",
+    "model": "model"
+  
+  }'
+      output: '{
+  "message": "Tenant not selected"
+}'
+  CreateDevice_Model_Enter_invalid_device_sub_type_code :
+      endPoint: /api/DeviceModel
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/DeviceManager/devicemanager
+      outputTemplate: idRepository/DeviceManager/devicemanagerResult
+      input: '{
+    "deviceTypeCode": "finger",
+    "deviceSubTypeCode": "hands",
+    "make": "make",
+    "model": "model"
+  
+  }'
+      output: '{
+  "message": "Tenant not selected"
+}'
+  CreateDevice_model_enter_invalid_combination_of_device_type_and_subtype_code :
+      endPoint: /api/DeviceModel
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/DeviceManager/devicemanager
+      outputTemplate: idRepository/DeviceManager/devicemanagerResult
+      input: '{
+    "deviceTypeCode": "finger",
+    "deviceSubTypeCode": "full face",
+    "make": "make",
+    "model": "model"
+  
+  }'
+      output: '{
+  "message": "Tenant not selected"
+}'
+  CreateDevice_Model_Entering_invalid_sub_type_and_device_type_code :
+      endPoint: /api/DeviceModel
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/DeviceManager/devicemanager
+      outputTemplate: idRepository/DeviceManager/devicemanagerResult
+      input: '{
+    "deviceTypeCode": "xyz",
+    "deviceSubTypeCode": "xyz",
+    "make": "make",
+    "model": "model"
+  
+  }'
+      output: '{
+  "message": "Tenant not selected"
+}'
+  CreateDevice_Model_Enter_make_values_as_digits  :
+      endPoint: /api/DeviceModel
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/DeviceManager/devicemanager
+      outputTemplate: idRepository/DeviceManager/devicemanagerResult
+      input: '{
+    "deviceTypeCode": "finger",
+    "deviceSubTypeCode": "slap",
+    "make": "123",
+    "model": "1234"
+  
+  }'
+      output: '{
+  "message": "Tenant not selected"
+}'
+  CreateDevice_Model_Without_entering_DeviceTypeCode_field  :
+      endPoint: /api/DeviceModel
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/DeviceManager/devicemanager
+      outputTemplate: idRepository/DeviceManager/devicemanagerResult
+      input: '{
+    "deviceTypeCode": "$REMOVE$",
+    "deviceSubTypeCode": "slap",
+    "make": "@#$",
+    "model": "1234"
+  
+  }'
+      output: '{
+  "message": "Tenant not selected"
+}'
+  CreateDevice_Model_Without_entering_Device_sub_type_code   :
+      endPoint: /api/DeviceModel
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/DeviceManager/devicemanager
+      outputTemplate: idRepository/DeviceManager/devicemanagerResult
+      input: '{
+    "deviceTypeCode": "finger",
+    "deviceSubTypeCode": "$REMOVE$",
+    "make": "@#$",
+    "model": "1234"
+  
+  }'
+      output: '{
+  "message": "Tenant not selected"
+}'
+  CreateDevice_Model_Without_entering_Make_field   :
+      endPoint: /api/DeviceModel
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/DeviceManager/devicemanager
+      outputTemplate: idRepository/DeviceManager/devicemanagerResult
+      input: '{
+    "deviceTypeCode": "finger",
+    "deviceSubTypeCode": "slap",
+    "make": "$REMOVE$",
+    "model": "1234"
+  
+  }'
+      output: '{
+  "message": "Tenant not selected"
+}'
+  CreateDevice_Model_Without_entering_Model_field   :
+      endPoint: /api/DeviceModel
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/DeviceManager/devicemanager
+      outputTemplate: idRepository/DeviceManager/devicemanagerResult
+      input: '{
+    "deviceTypeCode": "finger",
+    "deviceSubTypeCode": "slap",
+    "make": "@#$",
+    "model": "$REMOVE$"
+  
+  }'
+      output: '{
+  "message": "Tenant not selected"
+}'
+

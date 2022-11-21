@@ -1,0 +1,31 @@
+ChangePassword:
+   Authentication:
+      endPoint: /v1/masterdata/ChangePassword
+      role: admin
+      templateFields: ["description","name"]
+      restMethod: post
+      inputTemplate: masterdata/Changepsw/Changepsw_input
+      outputTemplate: masterdata/Changepsw/Changepsw_output
+      input: '{
+  "id": "string",
+  "version": "string",
+  "requesttime": "string",
+  "metadata": ,
+  "request": {
+    "username": "admin",
+    "password": "Techno@123"
+  }
+}'
+      output: '{
+  "id": null,
+  "version": null,
+  "responsetime": null,
+  "metadata": null,
+  "countryId": 1,
+  "partnerId": 24,
+  "response": {
+    "authenticationToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBZG1pbiIsImp0aSI6IjMyZmIzY2Q0LTI0NTAtNGJlYi1hOTg0LTQzMjQ1OWUwNjUzNSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNjU1ODE5ODk1LCJpc3MiOiJ0ZWNobm9mb3J0ZS5jby5pbiIsImF1ZCI6InRlY2hub2ZvcnRlLmNvLmluIn0.-2FmWqAUn9_yQB32X4Qoq_9Li-l9DIIvtaJ7CtLmXSo",
+    "role": "Admin"
+  },
+  "errors": null
+}'

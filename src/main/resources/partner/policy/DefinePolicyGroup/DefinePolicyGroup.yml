@@ -1,0 +1,73 @@
+definePolicyGroup:
+   Partner_DefinePolicyGroup_All_Valid_Smoke_sid:
+      endPoint: /v1/policymanager/policies/group/new
+      role: partner
+      restMethod: post
+      inputTemplate: partner/policy/DefinePolicyGroup/definePolicyGroup
+      outputTemplate: partner/policy/DefinePolicyGroup/definePolicyGroupResult
+      input: '{
+    "desc": "desc mosip policy group",
+    "name": "mosip policy group",
+    "requesttime": "$TIMESTAMP$"
+  }'
+      output: ' {
+      "id": "$IGNORE$",
+        "name": "mosip policy group",
+        "desc": "desc mosip policy group",
+        "is_Active": true
+    }'
+   Partner_DefinePolicyGroup_UpdatePolicyGroupForPartner_AllValid_Smoke_sid:
+      endPoint: /v1/policymanager/policies/group/new
+      role: partner
+      restMethod: post
+      inputTemplate: partner/policy/DefinePolicyGroup/definePolicyGroup
+      outputTemplate: partner/policy/DefinePolicyGroup/definePolicyGroupResult
+      input: '{
+    "desc": "desc update policy group",
+    "name": "update_policy_group",
+    "requesttime": "$TIMESTAMP$"
+  }'
+      output: ' {
+      "id": "$IGNORE$",
+        "name": "update_policy_group",
+        "desc": "desc update policy group",
+        "is_Active": true
+    }'
+   Partner_DefinePolicyGroup_Missing_InputParameter_desc:
+      endPoint: /v1/policymanager/policies/group/new
+      role: partner
+      restMethod: post
+      inputTemplate: partner/policy/DefinePolicyGroup/definePolicyGroup
+      outputTemplate: partner/error
+      input: '{
+    "desc": "$REMOVE$",
+    "name": "mosip policy group",
+    "requesttime": "$TIMESTAMP$"
+  }'
+      output: '{
+   "errors": [
+    {
+      "errorCode": "PMS_COR_001",
+      "message": "Invalid request parameter - value is empty or null :request.desc"
+    }
+  ]
+}'
+   Partner_DefinePolicyGroup_Missing_InputParameter_name:
+      endPoint: /v1/policymanager/policies/group/new
+      role: partner
+      restMethod: post
+      inputTemplate: partner/policy/DefinePolicyGroup/definePolicyGroup
+      outputTemplate: partner/error
+      input: '{
+    "desc": "desc mosip policy group",
+    "name": "$REMOVE$",
+    "requesttime": "$TIMESTAMP$"
+  }'
+      output: '{
+   "errors": [
+    {
+      "errorCode": "PMS_COR_001",
+      "message": "Invalid request parameter - value is empty or null :request.name"
+    }
+  ]
+}'

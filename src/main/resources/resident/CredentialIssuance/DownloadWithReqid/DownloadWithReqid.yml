@@ -1,0 +1,29 @@
+DownloadCredential:
+   Resident_CredentialsStatus_All_Valid_Smoke_euin:
+      endPoint: /resident/v1/req/card/{requestId}
+      role: resident
+      restMethod: get
+      inputTemplate: resident/CredentialIssuance/DownloadWithReqid/downloadwithreqid
+      outputTemplate: resident/CredentialIssuance/DownloadWithReqid/downloadwithreqidResult
+      input: '{
+        "requestId": "$ID:RequestCredentials_euin_All_Valid_Smoke_sid_requestId$",
+        "requesttime": "$TIMESTAMP$"
+    }'
+      output: ' {
+        "Content-Type": "application/pdf",
+        "filename": "$IGNORE$"
+    }'
+   Resident_CredentialsStatus_euin_All_Valid_Smoke_QrCode:
+      endPoint: /resident/v1/req/card/{requestId}
+      role: resident
+      restMethod: get
+      inputTemplate: resident/CredentialIssuance/DownloadWithReqid/downloadwithreqid
+      outputTemplate: resident/CredentialIssuance/DownloadWithReqid/downloadwithreqidResult
+      input: '{
+        "requestId": "$ID:RequestCredentials_Qrcode_All_Valid_Smoke_sid_requestId$",
+        "requesttime": "$TIMESTAMP$"
+    }'
+      output: ' {
+        "Content-Type": "application/pdf",
+        "filename": "$IGNORE$"
+    }'

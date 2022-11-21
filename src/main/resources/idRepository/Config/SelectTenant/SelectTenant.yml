@@ -1,0 +1,15 @@
+SelectTenant:
+  Select_Tenant:
+      endPoint: /v2/api/SelectTenant
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/SelectTenant/selecttenant
+      outputTemplate: idRepository/SelectTenant/selecttenantResult
+      input: '  {
+    "countryName": "India",
+    "partnerName": "testp0"
+  
+}'
+      output: '{
+  "message":"Invalid Partner"
+}'

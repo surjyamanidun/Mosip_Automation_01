@@ -1,0 +1,136 @@
+CreateVID:
+  ChangePassword_Invalid_Username:
+      endPoint: /v2/api/ChangePassword
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Changepsw/createVid
+      outputTemplate: idRepository/Changepsw/error
+      input: '{
+    "username": "admin256",
+    "currentPassword": "Techno@123",
+    "newPassword": "Techno@1234",
+    "confirmPassword": "Techno@1234"
+  }'
+      output: '{
+  "message":"Username is invalid"
+}'
+  ChangePassword-Enter_new_password_and_confirm_password_differently :
+      endPoint: /v2/api/ChangePassword
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Changepsw/createVid
+      outputTemplate: idRepository/Changepsw/error
+      input: '{
+    "username": "admin",
+    "currentPassword": "Techno@123",
+    "newPassword": "Techno@14",
+    "confirmPassword": "Techno@1234"
+  }'
+      output: '{
+  "message":"Username is invalid"
+}'
+  ChangePassword_Invalid_Current_password  :
+      endPoint: /v2/api/ChangePassword
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Changepsw/createVid
+      outputTemplate: idRepository/Changepsw/error
+      input: '{
+    "username": "admin",
+    "currentPassword": "Techno@123456",
+    "newPassword": "Techno@1234",
+    "confirmPassword": "Techno@1234"
+  }'
+      output: '{
+  "message":"Username is invalid"
+}'
+  ChangePassword_Enter_new_password_without_providing_non_alphanumeric_character   :
+      endPoint: /v2/api/ChangePassword
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Changepsw/createVid
+      outputTemplate: idRepository/Changepsw/error
+      input: '{
+    "username": "admin",
+    "currentPassword": "Techno@123",
+    "newPassword": "Karthik1234",
+    "confirmPassword": "Karthik1234"
+  }'
+      output: '{
+  "message":"Username is invalid"
+}'
+  ChangePassword_Enter_new_password_without_providing_digits   :
+      endPoint: /v2/api/ChangePassword
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Changepsw/createVid
+      outputTemplate: idRepository/Changepsw/error
+      input: '{
+    "username": "admin",
+    "currentPassword": "Techno@123",
+    "newPassword": "Karthik@",
+    "confirmPassword": "Karthik@"
+  }'
+      output: '{
+  "message":"Username is invalid"
+}'
+  Changepassword_Enter_new_password_without_providing_uppercase   :
+      endPoint: /v2/api/ChangePassword
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Changepsw/createVid
+      outputTemplate: idRepository/Changepsw/error
+      input: '{
+    "username": "admin",
+    "currentPassword": "Techno@123",
+    "newPassword": "hello@1234",
+    "confirmPassword": "hello@1234"
+  }'
+      output: '{
+  "message":"Passwords must have at least one uppercase"
+}'
+  ChangePassword_Enter_new_password_with_less_characters   :
+      endPoint: /v2/api/ChangePassword
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Changepsw/createVid
+      outputTemplate: idRepository/Changepsw/error
+      input: '{
+    "username": "admin",
+    "currentPassword": "Techno@123",
+    "newPassword": "ka@14",
+    "confirmPassword": "ka@14"
+  }'
+      output: '{
+  "message":"Username is invalid"
+}'
+  Changepassword_Without_entering_new_Password_field    :
+      endPoint: /v2/api/ChangePassword
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Changepsw/createVid
+      outputTemplate: idRepository/Changepsw/error
+      input: '{
+    "username": "admin",
+    "currentPassword": "Techno@123",
+    "newPassword": "$REMOVE$",
+    "confirmPassword": "Karthik@1234"
+  }'
+      output: '{
+  "message":"Username is invalid"
+}'
+  Changepassword_Without_entering_confirm_Password_field    :
+      endPoint: /v2/api/ChangePassword
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Changepsw/createVid
+      outputTemplate: idRepository/Changepsw/error
+      input: '{
+    "username": "admin",
+    "currentPassword": "Techno@123",
+    "newPassword": "kart@14",
+    "confirmPassword": "$REMOVE$"
+  }'
+      output: '{
+  "message":"Username is invalid"
+}'

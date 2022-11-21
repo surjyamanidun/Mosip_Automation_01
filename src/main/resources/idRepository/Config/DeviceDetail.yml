@@ -1,0 +1,213 @@
+Config:
+  Configs_Configkey_as_DeviceCrtStorageOption :
+      endPoint: /v2/api/Configs
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Config/devicedetail
+      outputTemplate: idRepository/Config/devicedetailResult
+      input: '{
+     "configKey": "DeviceCrtStorageOption",
+    "configValue": "FileSystem"
+  
+  }'
+      output: '{
+  "message": "ConfigKey Already Exists"
+}'
+  Configs_With_existing_Configkey :
+      endPoint: /v2/api/Configs
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Config/devicedetail
+      outputTemplate: idRepository/Config/devicedetailResult
+      input: '{
+     "configKey": "DeviceCrtStorageOption",
+    "configValue": "FileSystem"
+  
+  }'
+      output: '{
+  "message": "ConfigKey Already Exists"
+}'
+  Configs_Configkey_as_KeyCombination :
+      endPoint: /v2/api/Configs
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Config/devicedetail
+      outputTemplate: idRepository/Config/devicedetailResult
+      input: '{
+       "configKey": "KeyCombination",
+    "configValue": "PerSBI"
+  }'
+      output: '{
+  "message": "ConfigKey Already Exists"
+}'
+  Configs_Invalid_combination_of_config_key_and_config_value  :
+      endPoint: /v2/api/Configs
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Config/devicedetail
+      outputTemplate: idRepository/Config/devicedetailResult
+      input: '{
+     "configKey":  "DeviceCrtStorageOption",
+    "configValue": "PerSBI"
+  }'
+      output: '{
+  "message": "ConfigKey Already Exists"
+}'
+  Configs_Enter_invalid_configvalue :
+      endPoint: /v2/api/Configs
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Config/devicedetail
+      outputTemplate: idRepository/Config/devicedetailResult
+      input: '{
+     "configKey":  "DeviceCrtStorageOption",
+    "configValue": "xyz"
+  }'
+      output: '{
+  "message": "ConfigKey Already Exists"
+}'
+  Configs_Enter_invalid_configvalue_and_Invalid_config_key :
+      endPoint: /v2/api/Configs
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Config/devicedetail
+      outputTemplate: idRepository/Config/devicedetailResult
+      input: '{
+    "configKey": "check",
+    "configValue": "Per123"
+  }'
+      output: '{
+  "message": "ConfigKey Already Exists"
+}'
+  Configs_Without_entering_configkey :
+      endPoint: /v2/api/Configs
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Config/devicedetail
+      outputTemplate: idRepository/Config/devicedetailResult
+      input: '{
+    "configKey": "$REMOVE$",
+    "configValue": "PerSBI"
+  }'
+      output: '{
+  "message": "ConfigKey Already Exists"
+}'
+  Configs_Without_entering_configvalue :
+      endPoint: /v2/api/Configs
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/Config/devicedetail
+      outputTemplate: idRepository/Config/devicedetailResult
+      input: '{
+    "configKey": "KeyCombination",
+    "configValue": "$REMOVE$"
+  }'
+      output: '{
+  "message": "ConfigKey Already Exists"
+}'
+  Update_Configs :
+      endPoint: /v2/api/Configs/DeviceCrtStorageOption
+      role: idm
+      restMethod: put
+      inputTemplate: idRepository/Config/devicedetail
+      outputTemplate: idRepository/Config/updateResult
+      input: '{
+    "configKey": "KeyCombination",
+    "configValue": "PerSBI"
+  }'
+      output: '{
+   "ConfigId": 10,
+    "ConfigKey": "DeviceCrtStorageOption",
+    "ConfigValue": "FileSystem",
+    "CreatedDate": "2022-07-29T14:37:59.392394",
+    "ModifiedDate": "2022-10-14T09:42:48.9455709+05:30"
+}' 
+  Update_config_multipultime_Config_as_DeviceCrtStorageOption :
+      endPoint: /v2/api/Configs/DeviceCrtStorageOption
+      role: idm
+      restMethod: put
+      inputTemplate: idRepository/Config/devicedetail
+      outputTemplate: idRepository/Config/updateResult
+      input: '{
+    "configKey": "DeviceCrtStorageOption",
+    "configValue": "FileSystem"
+  }'
+      output: '{
+   "ConfigId": 10,
+    "ConfigKey": "DeviceCrtStorageOption",
+    "ConfigValue": "FileSystem",
+    "CreatedDate": "2022-07-29T14:37:59.392394",
+    "ModifiedDate": "2022-10-14T09:42:48.9455709+05:30"
+}'
+  Update_configs_mltipultimes :
+      endPoint: /v2/api/Configs/DeviceCrtStorageOption
+      role: idm
+      restMethod: put
+      inputTemplate: idRepository/Config/devicedetail
+      outputTemplate: idRepository/Config/updateResult
+      input: '{
+    "configKey": "DeviceCrtStorageOption",
+    "configValue": "FileSystem"
+  
+  }'
+      output: '{
+   "ConfigId": 10,
+    "ConfigKey": "DeviceCrtStorageOption",
+    "ConfigValue": "FileSystem",
+    "CreatedDate": "2022-07-29T14:37:59.392394",
+    "ModifiedDate": "2022-10-14T09:42:48.9455709+05:30"
+}'
+  Update_Confi_Without_existingconfigkey :
+      endPoint: /v2/api/Configs/DeviceCrtStorageOption
+      role: idm
+      restMethod: put
+      inputTemplate: idRepository/Config/devicedetail
+      outputTemplate: idRepository/Config/updateResult
+      input: '{
+     "configKey": "KeyCombination",
+    "configValue": "PerSBI"
+  
+  }'
+      output: '{
+   "ConfigId": 10,
+    "ConfigKey": "DeviceCrtStorageOption",
+    "ConfigValue": "FileSystem",
+    "CreatedDate": "2022-07-29T14:37:59.392394",
+    "ModifiedDate": "2022-10-14T09:42:48.9455709+05:30"
+}'
+  Updateconfigs _Without_entering_Config_key_field :
+      endPoint: /v2/api/Configs/DeviceCrtStorageOption
+      role: idm
+      restMethod: put
+      inputTemplate: idRepository/Config/devicedetail
+      outputTemplate: idRepository/Config/updateResult
+      input: '{
+    "configKey": "$REMOVE$",
+    "configValue": "TPM"
+  
+  }'
+      output: '{
+   "ConfigId": 10,
+    "ConfigKey": "DeviceCrtStorageOption",
+    "ConfigValue": "FileSystem",
+    "CreatedDate": "2022-07-29T14:37:59.392394",
+    "ModifiedDate": "2022-10-14T09:42:48.9455709+05:30"
+}'
+  Updateconfigs _Without_entering_Config_value_field :
+      endPoint: /v2/api/Configs/DeviceCrtStorageOption
+      role: idm
+      restMethod: put
+      inputTemplate: idRepository/Config/devicedetail
+      outputTemplate: idRepository/Config/updateResult
+      input: '{
+    "configKey": "KeyCombination",
+    "configValue": "$REMOVE$"
+  
+  }'
+      output: '{
+   "ConfigId": 10,
+    "ConfigKey": "KeyCombination",
+    "ConfigValue": "$REMOVE$",
+    "CreatedDate": "2022-07-29T14:37:59.392394",
+    "ModifiedDate": "2022-10-14T09:42:48.9455709+05:30"
+}'

@@ -1,0 +1,172 @@
+UpdateDeviceModel:
+  UpdateDevice_Model:
+      endPoint: /api/DeviceModel
+      role: idm
+      restMethod: put
+      inputTemplate: idRepository/DeviceManager/devicemanager
+      outputTemplate: idRepository/DeviceManager/devicemanagerResult
+      input: '{
+    "id": "India",
+    "deviceTypeCode": "face",
+    "deviceSubTypeCode": "full face",
+    "make": "make",
+    "model": "model"
+  
+  }'
+      output: '{
+  "message": "Tenant not selected"
+}'
+  UpdateDevice_Model_With_invalid_id:
+      endPoint: /api/DeviceModel
+      role: idm
+      restMethod: put
+      inputTemplate: idRepository/DeviceManager/devicemanager
+      outputTemplate: idRepository/DeviceManager/devicemanagerResult
+      input: '{
+      "id": "$REMOVE$",
+      "deviceTypeCode": "face",
+    "deviceSubTypeCode": "full face",
+    "make": "p25",
+    "model": "p25"
+  
+  
+  }'
+      output: '{
+  "message": "Tenant not selected"
+}'
+  UpdateDevice_Mode_With_invalid_device_sub_type_code :
+      endPoint: /api/DeviceModel
+      role: idm
+      restMethod: put
+      inputTemplate: idRepository/DeviceManager/devicemanager
+      outputTemplate: idRepository/DeviceManager/devicemanagerResult
+      input: '{
+      "deviceTypeCode": "jhgdb",
+    "deviceSubTypeCode": "full face",
+    "make": "p25",
+    "model": "p25"
+  
+  
+  }'
+      output: '{
+  "message": "Tenant not selected"
+}'
+  UpdateDevice_Model_Entering_invalid_combination_of_device_sub_type_code :
+      endPoint: /api/DeviceModel
+      role: idm
+      restMethod: put
+      inputTemplate: idRepository/DeviceManager/devicemanager
+      outputTemplate: idRepository/DeviceManager/devicemanagerResult
+      input: '{
+      "deviceTypeCode": "finger",
+    "deviceSubTypeCode": "full face",
+    "make": "p25",
+    "model": "p25"
+  
+  
+  }'
+      output: '{
+  "message": "Tenant not selected"
+}'
+  UpdateDevice_Model_Entering_invalid_device_sub_type_code :
+      endPoint: /api/DeviceModel
+      role: idm
+      restMethod: put
+      inputTemplate: idRepository/DeviceManager/devicemanager
+      outputTemplate: idRepository/DeviceManager/devicemanagerResult
+      input: '{
+      "deviceTypeCode": "finger",
+    "deviceSubTypeCode": "hdgxv",
+    "make": "p25",
+    "model": "p25"
+  
+  
+  }'
+      output: '{
+  "message": "Tenant not selected"
+}'
+  UpdateDevice_Model_Enter_make_as_digits :
+      endPoint: /api/DeviceModel
+      role: idm
+      restMethod: put
+      inputTemplate: idRepository/DeviceManager/devicemanager
+      outputTemplate: idRepository/DeviceManager/devicemanagerResult
+      input: '{
+      "deviceTypeCode": "finger",
+    "deviceSubTypeCode": "slap",
+    "make": "25",
+    "model": "25"
+  
+  
+  }'
+      output: '{
+  "message": "Tenant not selected"
+}'
+  UpdateDevice_Model_Without_entering_device_type_code_field :
+      endPoint: /api/DeviceModel
+      role: idm
+      restMethod: put
+      inputTemplate: idRepository/DeviceManager/devicemanager
+      outputTemplate: idRepository/DeviceManager/devicemanagerResult
+      input: '{
+      "deviceTypeCode": "$REMOVE$",
+    "deviceSubTypeCode": "slap",
+    "make": "p25",
+    "model": "p25"
+  
+  
+  }'
+      output: '{
+  "message": "Tenant not selected"
+}'
+  UpdateDevice_Model_Without_entering_device_sub_type_code_field :
+      endPoint: /api/DeviceModel
+      role: idm
+      restMethod: put
+      inputTemplate: idRepository/DeviceManager/devicemanager
+      outputTemplate: idRepository/DeviceManager/devicemanagerResult
+      input: '{
+      "deviceTypeCode": "finger",
+    "deviceSubTypeCode": "$REMOVE$",
+    "make": "p25",
+    "model": "p25"
+  
+  
+  }'
+      output: '{
+  "message": "Tenant not selected"
+}'
+  UpdateDevice_Model_Without_entering_model _field :
+      endPoint: /api/DeviceModel
+      role: idm
+      restMethod: put
+      inputTemplate: idRepository/DeviceManager/devicemanager
+      outputTemplate: idRepository/DeviceManager/devicemanagerResult
+      input: '{
+      "deviceTypeCode": "finger",
+    "deviceSubTypeCode": "slap",
+    "make": "p25",
+    "model": "$REMOVE$"
+  
+  
+  }'
+      output: '{
+  "message": "Tenant not selected"
+}'
+  UpdateDevice_Model_Without_entering_model _field :
+      endPoint: /api/DeviceModel
+      role: idm
+      restMethod: put
+      inputTemplate: idRepository/DeviceManager/devicemanager
+      outputTemplate: idRepository/DeviceManager/devicemanagerResult
+      input: '{
+      "deviceTypeCode": "finger",
+    "deviceSubTypeCode": "slap",
+    "make": "p25",
+    "model": "$REMOVE$"
+  
+  
+  }'
+      output: '{
+  "message": "Tenant not selected"
+}'

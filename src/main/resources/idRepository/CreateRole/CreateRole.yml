@@ -1,0 +1,25 @@
+CreateRole:
+  Create_Role:
+      endPoint: /v2/api/CreateRole
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/CreateRole/createrole
+      outputTemplate: idRepository/CreateRole/createroleResult
+      input: '{
+    "request": "admin779"
+  }'
+      output: '{
+  "response": "admin779"
+}'
+  CreateRole_with_existing_role:
+      endPoint: /v2/api/CreateRole
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/CreateRole/createrole
+      outputTemplate: idRepository/CreateRole/createroleResult
+      input: '{
+    "request": "admin38"
+  }'
+      output: '{
+  "response": "admin38"
+}'

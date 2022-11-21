@@ -1,0 +1,186 @@
+DeviceManager:
+  RegisterUser:
+      endPoint: /v2/api/RegisterUser
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/RegisterUser/devicemanager
+      outputTemplate: idRepository/RegisterUser/devicemanagerResult
+      input: '{
+    "username": "test24",
+    "role": "admin",
+    "email": "test214@gmail.com",
+   "password": "Techno@123"
+   
+}'
+      output: '{
+  "message": " "
+}'
+  RegisterUser_with_existing_username:
+      endPoint: /v2/api/RegisterUser
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/RegisterUser/devicemanager
+      outputTemplate: idRepository/RegisterUser/devicemanagerResult
+      input: '{
+    "username": "technop21",
+    "role": "admin",
+    "email": "technopuy231@gmail.com",
+   "password": "Techno@123"
+}'
+      output: '{
+  "response": "53c5adfe-c98c-453e-9719-60b8e83b4c3c"
+}'
+
+
+
+
+  Register_User_with_existing_email_id :
+      endPoint: /v2/api/RegisterUser
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/RegisterUser/devicemanager
+      outputTemplate: idRepository/RegisterUser/devicemanagerResult
+      input: '{
+    "username": "technop87241",
+    "role": "admin",
+    "email": "technop21@gmail.com",
+   "password": "Techno@123"
+}'
+      output: '{
+  "response": "53c5adfe-c98c-453e-9719-60b8e83b4c3c"
+}'
+  Register_User_Without_entering_role_field:
+      endPoint: /v2/api/RegisterUser
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/RegisterUser/devicemanager
+      outputTemplate: idRepository/RegisterUser/devicemanagerResult
+      input: '{
+    "username": "technop8721",
+    "role": "$REMOVE$",
+    "email": "idea1@gmail.com",
+   "password": "Techno@123"
+}'
+      output: '{
+  "response": "53c5adfe-c98c-453e-9719-60b8e83b4c3c"
+}'
+  Register_User_Without_entering_Password_field:
+      endPoint: /v2/api/RegisterUser
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/RegisterUser/devicemanager
+      outputTemplate: idRepository/RegisterUser/devicemanagerResult
+      input: '{
+    "username": "technop8721",
+    "role": "admin",
+    "email": "Demo12345@gmail.com",
+   "password": "$REMOVE$"
+}'
+      output: '{
+  "response": "53c5adfe-c98c-453e-9719-60b8e83b4c3c"
+}'
+  Register_User_Without_entering_Email_Id_field:
+      endPoint: /v2/api/RegisterUser
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/RegisterUser/devicemanager
+      outputTemplate: idRepository/RegisterUser/devicemanagerResult
+      input: '{
+    "username": "technop8721",
+    "role": "admin",
+    "email": "$REMOVE$",
+   "password": "Techno@123"
+}'
+      output: '{
+  "response": "53c5adfe-c98c-453e-9719-60b8e83b4c3c"
+}'
+  Register_User_Without_entering_Username_field:
+      endPoint: /v2/api/RegisterUser
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/RegisterUser/devicemanager
+      outputTemplate: idRepository/RegisterUser/devicemanagerResult
+      input: '{
+    "username": "$REMOVE$",
+    "role": "admin",
+    "email": "Hitech121@gmail.com",
+   "password": "Techno@123"
+}'
+      output: '{
+  "response": "53c5adfe-c98c-453e-9719-60b8e83b4c3c"
+}'
+  Register_User_Enter_password_without_provinding_uppercase:
+      endPoint: /v2/api/RegisterUser
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/RegisterUser/devicemanager
+      outputTemplate: idRepository/RegisterUser/devicemanagerResult
+      input: '{
+    "username": "technop8721",
+    "role": "admin",
+    "email": "technop21@gmail.com",
+   "password": "techno@123"
+}'
+      output: '{
+  "response": "53c5adfe-c98c-453e-9719-60b8e83b4c3c"
+}'
+  Register_User_Enter_password_without_provinding_non_alphanumeric_character:
+      endPoint: /v2/api/RegisterUser
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/RegisterUser/devicemanager
+      outputTemplate: idRepository/RegisterUser/devicemanagerResult
+      input: '{
+    "username": "technop8721",
+    "role": "admin",
+    "email": "Guru066@gmail.com",
+   "password": "Techno123"
+}'
+      output: '{
+  "response": "53c5adfe-c98c-453e-9719-60b8e83b4c3c"
+}'
+  Register_User_Enter_password_without_providing_digits:
+      endPoint: /v2/api/RegisterUser
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/RegisterUser/devicemanager
+      outputTemplate: idRepository/RegisterUser/devicemanagerResult
+      input: '{
+    "username": "technop8721",
+    "role": "admin",
+    "email": "Demo1231@gmail.com",
+   "password": "Techno@f"
+}'
+      output: '{
+  "response": "53c5adfe-c98c-453e-9719-60b8e83b4c3c"
+}'
+  Register_User_Password_with_less_Characters:
+      endPoint: /v2/api/RegisterUser
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/RegisterUser/devicemanager
+      outputTemplate: idRepository/RegisterUser/devicemanagerResult
+      input: '{
+    "username": "technop8721",
+    "role": "admin",
+    "email": "technop21@gmail.com",
+   "password": "Te@1"
+}'
+      output: '{
+  "response": "53c5adfe-c98c-453e-9719-60b8e83b4c3c"
+}'
+  Register_User_Username_with_special_characters:
+      endPoint: /v2/api/RegisterUser
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/RegisterUser/devicemanager
+      outputTemplate: idRepository/RegisterUser/devicemanagerResult
+      input: '{
+    "username": "hello@$#21",
+    "role": "admin",
+    "email": "technop2jnhb1@gmail.com",
+   "password": "Techno@123"
+}'
+      output: '{
+  "response": "53c5adfe-c98c-453e-9719-60b8e83b4c3c"
+}'

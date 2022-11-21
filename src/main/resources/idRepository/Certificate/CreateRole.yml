@@ -1,0 +1,142 @@
+Certificate:
+ Initialize_HSM_Partition:
+      endPoint: /v2/api/InitializeHSMPartition
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/CreateRole/createrole
+      outputTemplate: idRepository/CreateRole/createroleResult
+      input: '{
+    "request": ""
+  }'
+      output: '{
+  "response": "Slot already provided, Key pair already generated in HSM for Partner: testp0"
+}'
+ Generate_Partner_Public_Key_From_HSM:
+      endPoint: /v2/api/GeneratePartnerPublicKeyFromHSM
+      role: idm
+      restMethod: get
+      inputTemplate: idRepository/CreateRole/createrole
+      outputTemplate: idRepository/CreateRole/createroleResult
+      input: '{
+    "request": ""
+  }'
+      output: '{
+  "message": "Tenant not selected"
+}'
+ Upload_Mosip_Signed_Partner_Certificate_Invalid_Certificate :
+      endPoint: /v2/api/UploadMosipSignedPartnerCertificate
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/CreateRole/createrole
+      outputTemplate: idRepository/CreateRole/createroleResult
+      input: '{
+    "request": "signedCertificate": "-----BEGIN CERTIFICATE-----
+MIIEmjCCA4KgAwIBAgII2rsYxwSPLcgwDQYJKoZIhvcNAQELBQAwdjELMAkGA1UE
+BhMCSU4xCzAJBgNVBAgMAktBMRIwEAYDVQQHDAlCQU5HQUxPUkUxDTALBgNVBAoM
+BElJVEIxIDAeBgNVBAsMF01PU0lQLVRFQ0gtQ0VOVEVSIChQTVMpMRUwEwYDVQQD
+DAx3d3cubW9zaXAuaW8wHhcNMjIwNzEzMDQxODEzWhcNMjMwNzEzMDQxODEzWjBg
+MQ4wDAYDVQQGEwVJbmRpYTEMMAoGA1UECAwDa2FyMQwwCgYDVQQHDANibHIxGDAW
+BgNVBAoMD3RlY2hub3AyMHVwZGF0ZTEYMBYGA1UEAwwPdGVjaG5vcDIwdXBkYXRl
+MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAuppz5MPX2fO+45NS5td+
+wz7znEias97aMo2ilEMNgqiZn5rVCzFYjBo5gJn87t+Yqo/+EDcxP1UBhFQV1cBx
+a39lw77fRjf9QceARoJf34nR6/hAx3OQ7pbJXEdW4R/dRN+P0rNRpRXxMgJLi5Vu
+Xi3V7bdbTVTXrkGBmwVQ2MT8oIy8fXur1k7dfiv1LSiHg/lKeoiCLcsWWUYyJPlk
+3+1nIRgMLo9v+/fwhuvjffX3pAq5syToqzIPlpUzmAjI8U+Okgf8oYRPXhse2k4j
+6Sc2lISRgHqawDIlONSP5X1+TvzqwJAZuyAyNFGKcpuANhAikzN/wUd9wD/T3AKv
+CPw9ZzBA0VnKocPFTnDvYDZU7YouH1mLoYJtBRw/uiMoSb2LkBNpFgMNkZ4TWIpC
+KOssQ7NL0K6IJnAYJcp0AvAlyZEPfT+J+hdihcGqijDI0CIhnxPdXAtc2OPwDXJo
+my19ikZqfawDKy/GP9rMgmBBWu2L/UHY+1JRzJKd40W9FtIyhtQDEETspBMUe2Mi
+mTNmH2p2aqoic2CuhbeJEOIAFFmwYIUsRjuOgku2Ms0/Mxi/kyNJ6z3xqrpaQA4t
+rb8FrwIB2/adkOSekGvjjsV+V3D6gpf+V6SNUHuFxRpl0OOPtPB5nVvkVS5pR5my
+gWnlulKIJ1Bi8tlDA9v4iWMCAwEAAaNCMEAwDwYDVR0TAQH/BAUwAwEB/zAdBgNV
+HQ4EFgQULkiSMjTytKT8sYcGykQC1MKULZEwDgYDVR0PAQH/BAQDAgKEMA0GCSqG
+SIb3DQEBCwUAA4IBAQBYdbmuPCUUu9Y0IcYYuockKy9/fbbs8AtPASUgViBEdz25
+6Y1DNoGY4CaJAseoft0WxfMEbfYQ58BIaveJqF5bXHpNBPUnubCZ1scH1De+Yauu
+dyiLxQFH/FO2/JRDf1YdlCEzLSr4GdvB1ou+t2JbxkWslBv6sckBM4lvXIOo7B2J
+nR8fgolusNNBy8BYuzPBCulAMUrmOqY0GVIWQ3abyhfbqbaebce3F0OCLB3xPyVc
+QIvswW+eCBtpy4ckbRQzgBzgUu3KqsG4JB2E6W7ISrtOAT5QjIVzyxkIhnN5rX5M
+qnAsR52UT0/MdXnsm1ZFl/fCXuvl8H5LzA6SaOgg
+-----END CERTIFICATE-----C156"
+  }'
+      output: '{
+  "message": "Tenant not selected"
+}'
+ Upload_Mosip_Signed_Partner_Certificate_Valid_certificate :
+      endPoint: /v2/api/UploadMosipSignedPartnerCertificate
+      role: idm
+      restMethod: post
+      inputTemplate: idRepository/CreateRole/createrole
+      outputTemplate: idRepository/CreateRole/createroleResult
+      input: '{
+    "request": 
+    "signedCertificate": "-----BEGIN CERTIFICATE-----
+MIIEbDCCA1SgAwIBAgII5xERqzIhvRAwDQYJKoZIhvcNAQELBQAwdjELMAkGA1UE
+BhMCSU4xCzAJBgNVBAgMAktBMRIwEAYDVQQHDAlCQU5HQUxPUkUxDTALBgNVBAoM
+BElJVEIxIDAeBgNVBAsMF01PU0lQLVRFQ0gtQ0VOVEVSIChQTVMpMRUwEwYDVQQD
+DAx3d3cubW9zaXAuaW8wHhcNMjIwNzI3MDQ0MjE4WhcNMjMwNzI3MDQ0MjE4WjAy
+MQ4wDAYDVQQGEwVJbmRpYTEPMA0GA1UECgwGdGVzdHAxMQ8wDQYDVQQDDAZ0ZXN0
+cDEwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQDSnC/4+RhtxThdMUBX
+cE4TZyHMvmU4Kx3ipLncPvk1uEHNI4uMFIIQJ1vREdpptDj/iYCm401de0KbBS0p
+guff8+VxwPth+6FK4QhP4WN0+8xizDtgKOOsxbRZE5d10twn1hc6m7GdrSAE8aR4
+TdCPOtHagZ9F+d40AX4tcjM2T3KMAq0DL8I7fTeEMekRkPrj1JOBXIf/Yap7t1Wx
+xcFjhaD9fE7W/2HHU5Pqt2/vC3BGdOUIIXf+S0OvJGg+vTV/HkBIavv9ISwnnHBL
+FjCqWbcRJUJ+zon8iNVWMtsc6sXqWeGk+ePXOdzu93+wt5OD5rDwd5PAaZPrh40g
+ddbtrQgaMYFjNHaf85t0TnaxbQITFs2NPm3J9Mocd+QhSTnWyghmiceyXn1j+jsZ
+bkB1nRQYptsin2Q7Qspc+r0RITWsl5L/bGLbdNks51979A4FosXAS0iqCuYnhgs7
+fhNJCoxDr4gAw5qBqb9u/XJ2nGKcqUQp7u9R5dmPs5Z4s1Il2IZiZ6Az8tUsNR2U
+qOBwWpchTGnNqAC34sj505B/kMqWhs1u/SCoz2HpGWU+L21jY4BZhJ8Dgbz1iAcU
+930MKuf7uAXByNAMSfaqEG8oRO324ReMy5iWdH7MPOj6up2qTy5Hf3r1Atn5FgKe
+85Ysm7+bZPAGCRo0Ich4MbZjTwIDAQABo0IwQDAPBgNVHRMBAf8EBTADAQH/MB0G
+A1UdDgQWBBTmj/+qiBeuJGyULIwDiDA1oBFPAzAOBgNVHQ8BAf8EBAMCAoQwDQYJ
+KoZIhvcNAQELBQADggEBABgoBRmKimcVZv94NI1br8n7sZ3CRuUuKSlkpgxXb2Bb
+Fug1lwt2MrtANlMlyvUD+Bm25Dclgk1IlKg3rglEAIviRNF2TBzkJXVFj58v42K0
+2urTORRK++KWoldw//Ek3qVHGwKHESk/hmfuI0cX4caNXy5oDWKLddNVVypFlPZE
+L8pNus6k5MSbMR45y5mS2KMnPkVF9SE6ayjd5/RMSzUcbu2j02aGE/fUT1YOft6W
+zRsRPXG5Jo54YuTbQxEpXLc31cQVXaR9K4FRjyxL4cRh+Uu1+Hej8t1mbkYQqWK1
+bOwzZ2JeHIdG1BpDlWGsLkxDNnjgzklKiE+OpeWqEM0=
+-----END CERTIFICATE-----"
+  
+  }'
+      output: '{
+  "response": ""
+}'
+ Certificate_store_Invalid_EncodeedSerialnumber:
+      endPoint: /v2/api/CertificateStore?encodedSerialNo=MTIzNA%3D%3D&validFrom=30-6-2022&validTill=30-6-2028
+      role: idm
+      restMethod: put
+      inputTemplate: idRepository/CreateRole/createrole
+      outputTemplate: idRepository/CreateRole/createroleResult
+      input: '{
+    "request": "encodedSerialno":"MTIzNA==" ,
+    "ValidFrom":"30-6-2022",
+    "ValidTill":"30-6-2028"
+  }'
+      output: '{
+  "response": ""
+}'
+ Certificate_store_valid_EncodeedSerialnumber:
+      endPoint: /v2/api/CertificateStore?encodedSerialNo=MTIzNA%3D%3D&validFrom=30-6-2022&validTill=30-6-2028
+      role: idm
+      restMethod: put
+      inputTemplate: idRepository/CreateRole/createrole
+      outputTemplate: idRepository/CreateRole/createroleResult
+      input: '{
+    "request": "encodedSerialno":"I3ZpZF8wYzQ1JnBpZF82NzFlJm1pXzAwIzYmMjk0MDViMjEmMCYwMDAwI3s2NWU4NzczZC04ZjU2LTExZDAtYTNiOS0wMGEwYzkyMjMxOTZ9" ,
+    "ValidFrom":"01/08/2021",
+    "ValidTill":"01/08/2011"
+  }'
+      output: '{
+  "response": ""
+}'
+ GetExpired_Certificate:
+      endPoint: /v2/api/GetExpiredCertificate
+      role: idm
+      restMethod: get
+      inputTemplate: idRepository/CreateRole/createrole
+      outputTemplate: idRepository/CreateRole/createroleResult
+      input: '{
+    "request": ""
+  }'
+      output: '{
+  "message": "Tenant not selected"
+}'

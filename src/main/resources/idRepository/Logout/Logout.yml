@@ -1,0 +1,11 @@
+Logout:
+  Logout:
+      endPoint: /v2/api/Logout
+      role: idm
+      restMethod: post
+      
+      outputTemplate: idRepository/Logout/logoutResult
+     
+      output: '{
+  "response": "User had been logged out successfully"
+}'

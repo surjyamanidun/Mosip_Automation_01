@@ -1,0 +1,703 @@
+MultiFactorAuth:
+  auth_MultiFactorAuth_Biometric_Face_With_Valid_Smoke_Pos:
+      endPoint: /idauthentication/v1/auth/$partnerKeyURL$
+      role: resident
+      restMethod: post
+      inputTemplate: ida/MultiFactorAuth/multiFactorAuth
+      outputTemplate: ida/MultiFactorAuth/multiFactorAuthResult
+      input: '{
+        "requestTime": "$TIMESTAMP$",
+        "individualId": "$ID:AddIdentity_ValidParam_smoke_Pos_UIN$",
+        "transactionId": "1234567890",
+        "individualIdType": "UIN",
+        "bio": true,
+        "demo": true,
+        "otp": true,
+        "sendOtp":{
+    "transactionID": "1234567890",
+    "requestTime": "$TIMESTAMP$",
+    "individualId": "$ID:AddIdentity_ValidParam_smoke_Pos_UIN$",
+    "individualIdType": "UIN",
+    "sendOtpReqTemplate": "ida/MultiFactorAuth/sendOtp",
+    "sendOtpEndPoint": "/idauthentication/v1/otp/$partnerKeyURL$",
+    },
+        "identityRequest":{
+          "bioSubType": "UNKNOWN",
+          "bioType": "FACE",
+          "bioValue": "$FACE$",
+          "deviceCode": "bc0b6848-6d45-46d1-a9bd-b334410bf823",
+          "dateTime": "$DATETIME$",
+          "deviceProviderID": "1873299273",
+          "deviceServiceID": "",
+          "deviceServiceVersion": "SB.WIN.001",
+          "deviceProvider": "SYNCBYTE",
+          "deviceProviderId": "SYNCBYTE.LTC165",
+          "deviceSubType": "Full face",
+          "make": "Logitech",
+          "model": "4d36e96c-e325-11ce-bfc1-08002be10318",
+          "serialNo": "78467171",
+          "type": "Face",
+          "key": "dob",
+          "value": "1970/07/08",
+    "transactionId": "1234567890",
+    "identityRequestTemplate": "ida/MultiFactorAuth/MultiFactorIdentityEncrypt",
+    "identityRequestEncUrl": "/idauthentication/v1/internal/encrypt"
+    }
+    }'
+      output: '{
+  "authStatus": "true",
+  "sendOtpResp":{
+        "transactionID": "1234567890",
+        "maskedMobile": "XXXXXX8538",
+        "sendOtpResTemplate":"ida/MultiFactorAuth/sendOtpRes",
+        "maskedEmail": "XXkXXiXXb@technoforte.co.in"
+    }
+}'
+  auth_MultiFactorAuth_Biometric_RingFinger_With_Valid_Smoke_Pos:
+      endPoint: /idauthentication/v1/auth/$partnerKeyURL$
+      role: resident
+      restMethod: post
+      inputTemplate: ida/MultiFactorAuth/multiFactorAuth
+      outputTemplate: ida/MultiFactorAuth/multiFactorAuthResult
+      input: '{
+        "requestTime": "$TIMESTAMP$",
+        "individualId": "$ID:AddIdentity_ValidParam_smoke_Pos_UIN$",
+        "transactionId": "1234567890",
+        "individualIdType": "UIN",
+        "bio": true,
+        "demo": true,
+        "otp": true,
+        "sendOtp":{
+    "transactionID": "1234567890",
+    "requestTime": "$TIMESTAMP$",
+    "individualId": "$ID:AddIdentity_ValidParam_smoke_Pos_UIN$",
+    "individualIdType": "UIN",
+    "sendOtpReqTemplate": "ida/MultiFactorAuth/sendOtp",
+    "sendOtpEndPoint": "/idauthentication/v1/otp/$partnerKeyURL$",
+    },
+        "identityRequest":{
+          "bioSubType": "Left RingFinger",
+          "bioType": "Finger",
+          "bioValue": "$LEFTRINGFINGER$",
+          "deviceCode": "bc0b6848-6d45-46d1-a9bd-b334410bf823",
+          "dateTime": "$DATETIME$",
+          "deviceProviderID": "SYNCBYTE.MC01A",
+          "deviceServiceID": "",
+          "deviceServiceVersion": "SB.WIN.001",
+          "deviceProvider": "SYNCBYTE",
+          "deviceProviderId": "SYNCBYTE.LTC165",
+          "deviceSubType": "Slap",
+          "make": "Logitech",
+          "model": "4d36e96c-e325-11ce-bfc1-08002be10318",
+          "serialNo": "78467175",
+          "type": "Finger",
+          "key": "dob",
+          "value": "1970/07/08",
+    "transactionId": "1234567890",
+    "identityRequestTemplate": "ida/MultiFactorAuth/MultiFactorIdentityEncrypt",
+    "identityRequestEncUrl": "/idauthentication/v1/internal/encrypt"
+    }
+    }'
+      output: '{
+  "authStatus": "true",
+  "sendOtpResp":{
+        "transactionID": "1234567890",
+        "maskedMobile": "XXXXXX8538",
+        "sendOtpResTemplate":"ida/MultiFactorAuth/sendOtpRes",
+        "maskedEmail": "XXkXXiXXb@technoforte.co.in"
+    }
+}'
+  auth_MultiFactorAuth_Biometric_LeftMiddleFingerr_With_Valid_Smoke_Pos:
+      endPoint: /idauthentication/v1/auth/$partnerKeyURL$
+      role: resident
+      restMethod: post
+      inputTemplate: ida/MultiFactorAuth/multiFactorAuth
+      outputTemplate: ida/MultiFactorAuth/multiFactorAuthResult
+      input: '{
+        "requestTime": "$TIMESTAMP$",
+        "individualId": "$ID:AddIdentity_ValidParam_smoke_Pos_UIN$",
+        "transactionId": "1234567890",
+        "individualIdType": "UIN",
+        "bio": true,
+        "demo": true,
+        "otp": true,
+        "sendOtp":{
+    "transactionID": "1234567890",
+    "requestTime": "$TIMESTAMP$",
+    "individualId": "$ID:AddIdentity_ValidParam_smoke_Pos_UIN$",
+    "individualIdType": "UIN",
+    "sendOtpReqTemplate": "ida/MultiFactorAuth/sendOtp",
+    "sendOtpEndPoint": "/idauthentication/v1/otp/$partnerKeyURL$",
+    },
+        "identityRequest":{
+          "bioSubType": "Left MiddleFinger",
+          "bioType": "Finger",
+          "bioValue": "$LEFTMIDDLEFINGER$",
+          "deviceCode": "bc0b6848-6d45-46d1-a9bd-b334410bf823",
+          "dateTime": "$DATETIME$",
+          "deviceProviderID": "SYNCBYTE.MC01A",
+          "deviceServiceID": "",
+          "deviceServiceVersion": "SB.WIN.001",
+          "deviceProvider": "SYNCBYTE",
+          "deviceProviderId": "SYNCBYTE.LTC165",
+          "deviceSubType": "Slap",
+          "make": "Logitech",
+          "model": "4d36e96c-e325-11ce-bfc1-08002be10318",
+          "serialNo": "78467175",
+          "type": "Finger",
+          "key": "dob",
+          "value": "1970/07/08",
+    "transactionId": "1234567890",
+    "identityRequestTemplate": "ida/MultiFactorAuth/MultiFactorIdentityEncrypt",
+    "identityRequestEncUrl": "/idauthentication/v1/internal/encrypt"
+    }
+    }'
+      output: '{
+  "authStatus": "true",
+  "sendOtpResp":{
+        "transactionID": "1234567890",
+        "maskedMobile": "XXXXXX8538",
+        "sendOtpResTemplate":"ida/MultiFactorAuth/sendOtpRes",
+        "maskedEmail": "XXkXXiXXb@technoforte.co.in"
+    }
+}'
+  auth_MultiFactorAuth_Biometric_LeftIndexFingerr_With_Valid_Smoke_Pos:
+      endPoint: /idauthentication/v1/auth/$partnerKeyURL$
+      role: resident
+      restMethod: post
+      inputTemplate: ida/MultiFactorAuth/multiFactorAuth
+      outputTemplate: ida/MultiFactorAuth/multiFactorAuthResult
+      input: '{
+        "requestTime": "$TIMESTAMP$",
+        "individualId": "$ID:AddIdentity_ValidParam_smoke_Pos_UIN$",
+        "transactionId": "1234567890",
+        "individualIdType": "UIN",
+        "bio": true,
+        "demo": true,
+        "otp": true,
+        "sendOtp":{
+    "transactionID": "1234567890",
+    "requestTime": "$TIMESTAMP$",
+    "individualId": "$ID:AddIdentity_ValidParam_smoke_Pos_UIN$",
+    "individualIdType": "UIN",
+    "sendOtpReqTemplate": "ida/MultiFactorAuth/sendOtp",
+    "sendOtpEndPoint": "/idauthentication/v1/otp/$partnerKeyURL$",
+    },
+        "identityRequest":{
+          "bioSubType": "Left IndexFinger",
+          "bioType": "Finger",
+          "bioValue": "$LEFTINDEXFINGER$",
+          "deviceCode": "bc0b6848-6d45-46d1-a9bd-b334410bf823",
+          "dateTime": "$DATETIME$",
+          "deviceProviderID": "SYNCBYTE.MC01A",
+          "deviceServiceID": "",
+          "deviceServiceVersion": "SB.WIN.001",
+          "deviceProvider": "SYNCBYTE",
+          "deviceProviderId": "SYNCBYTE.LTC165",
+          "deviceSubType": "Slap",
+          "make": "Logitech",
+          "model": "4d36e96c-e325-11ce-bfc1-08002be10318",
+          "serialNo": "78467175",
+          "type": "Finger",
+          "key": "dob",
+          "value": "1970/07/08",
+    "transactionId": "1234567890",
+    "identityRequestTemplate": "ida/MultiFactorAuth/MultiFactorIdentityEncrypt",
+    "identityRequestEncUrl": "/idauthentication/v1/internal/encrypt"
+    }
+    }'
+      output: '{
+  "authStatus": "true",
+  "sendOtpResp":{
+        "transactionID": "1234567890",
+        "maskedMobile": "XXXXXX8538",
+        "sendOtpResTemplate":"ida/MultiFactorAuth/sendOtpRes",
+        "maskedEmail": "XXkXXiXXb@technoforte.co.in"
+    }
+}'
+  auth_MultiFactorAuth_Biometric_LeftLittleFinger_With_Valid_Smoke_Pos:
+      endPoint: /idauthentication/v1/auth/$partnerKeyURL$
+      role: resident
+      restMethod: post
+      inputTemplate: ida/MultiFactorAuth/multiFactorAuth
+      outputTemplate: ida/MultiFactorAuth/multiFactorAuthResult
+      input: '{
+        "requestTime": "$TIMESTAMP$",
+        "individualId": "$ID:AddIdentity_ValidParam_smoke_Pos_UIN$",
+        "transactionId": "1234567890",
+        "individualIdType": "UIN",
+        "bio": true,
+        "demo": true,
+        "otp": true,
+        "sendOtp":{
+    "transactionID": "1234567890",
+    "requestTime": "$TIMESTAMP$",
+    "individualId": "$ID:AddIdentity_ValidParam_smoke_Pos_UIN$",
+    "individualIdType": "UIN",
+    "sendOtpReqTemplate": "ida/MultiFactorAuth/sendOtp",
+    "sendOtpEndPoint": "/idauthentication/v1/otp/$partnerKeyURL$",
+    },
+        "identityRequest":{
+          "bioSubType": "Left LittleFinger",
+          "bioType": "Finger",
+          "bioValue": "$LEFTLITTLEFINGER$",
+          "deviceCode": "bc0b6848-6d45-46d1-a9bd-b334410bf823",
+          "dateTime": "$DATETIME$",
+          "deviceProviderID": "SYNCBYTE.MC01A",
+          "deviceServiceID": "",
+          "deviceServiceVersion": "SB.WIN.001",
+          "deviceProvider": "SYNCBYTE",
+          "deviceProviderId": "SYNCBYTE.LTC165",
+          "deviceSubType": "Slap",
+          "make": "Logitech",
+          "model": "4d36e96c-e325-11ce-bfc1-08002be10318",
+          "serialNo": "78467175",
+          "type": "Finger",
+          "key": "dob",
+          "value": "1970/07/08",
+    "transactionId": "1234567890",
+    "identityRequestTemplate": "ida/MultiFactorAuth/MultiFactorIdentityEncrypt",
+    "identityRequestEncUrl": "/idauthentication/v1/internal/encrypt"
+    }
+    }'
+      output: '{
+  "authStatus": "true",
+  "sendOtpResp":{
+        "transactionID": "1234567890",
+        "maskedMobile": "XXXXXX8538",
+        "sendOtpResTemplate":"ida/MultiFactorAuth/sendOtpRes",
+        "maskedEmail": "XXkXXiXXb@technoforte.co.in"
+    }
+}'
+  auth_MultiFactorAuth_Biometric_RightIndexFinger_With_Valid_Smoke_Pos:
+      endPoint: /idauthentication/v1/auth/$partnerKeyURL$
+      role: resident
+      restMethod: post
+      inputTemplate: ida/MultiFactorAuth/multiFactorAuth
+      outputTemplate: ida/MultiFactorAuth/multiFactorAuthResult
+      input: '{
+        "requestTime": "$TIMESTAMP$",
+        "individualId": "$ID:AddIdentity_ValidParam_smoke_Pos_UIN$",
+        "transactionId": "1234567890",
+        "individualIdType": "UIN",
+        "bio": true,
+        "demo": true,
+        "otp": true,
+        "sendOtp":{
+    "transactionID": "1234567890",
+    "requestTime": "$TIMESTAMP$",
+    "individualId": "$ID:AddIdentity_ValidParam_smoke_Pos_UIN$",
+    "individualIdType": "UIN",
+    "sendOtpReqTemplate": "ida/MultiFactorAuth/sendOtp",
+    "sendOtpEndPoint": "/idauthentication/v1/otp/$partnerKeyURL$",
+    },
+        "identityRequest":{
+          "bioSubType": "Right IndexFinger",
+          "bioType": "Finger",
+          "bioValue": "$RIGHTINDEXFINGER$",
+          "deviceCode": "bc0b6848-6d45-46d1-a9bd-b334410bf823",
+          "dateTime": "$DATETIME$",
+          "deviceProviderID": "SYNCBYTE.MC01A",
+          "deviceServiceID": "",
+          "deviceServiceVersion": "SB.WIN.001",
+          "deviceProvider": "SYNCBYTE",
+          "deviceProviderId": "SYNCBYTE.LTC165",
+          "deviceSubType": "Slap",
+          "make": "Logitech",
+          "model": "4d36e96c-e325-11ce-bfc1-08002be10318",
+          "serialNo": "78467175",
+          "type": "Finger",
+          "key": "dob",
+          "value": "1970/07/08",
+    "transactionId": "1234567890",
+    "identityRequestTemplate": "ida/MultiFactorAuth/MultiFactorIdentityEncrypt",
+    "identityRequestEncUrl": "/idauthentication/v1/internal/encrypt"
+    }
+    }'
+      output: '{
+  "authStatus": "true",
+  "sendOtpResp":{
+        "transactionID": "1234567890",
+        "maskedMobile": "XXXXXX8538",
+        "sendOtpResTemplate":"ida/MultiFactorAuth/sendOtpRes",
+        "maskedEmail": "XXkXXiXXb@technoforte.co.in"
+    }
+}'
+  auth_MultiFactorAuth_Biometric_RightRingFinger_With_Valid_Smoke_Pos:
+      endPoint: /idauthentication/v1/auth/$partnerKeyURL$
+      role: resident
+      restMethod: post
+      inputTemplate: ida/MultiFactorAuth/multiFactorAuth
+      outputTemplate: ida/MultiFactorAuth/multiFactorAuthResult
+      input: '{
+        "requestTime": "$TIMESTAMP$",
+        "individualId": "$ID:AddIdentity_ValidParam_smoke_Pos_UIN$",
+        "transactionId": "1234567890",
+        "individualIdType": "UIN",
+        "bio": true,
+        "demo": true,
+        "otp": true,
+        "sendOtp":{
+    "transactionID": "1234567890",
+    "requestTime": "$TIMESTAMP$",
+    "individualId": "$ID:AddIdentity_ValidParam_smoke_Pos_UIN$",
+    "individualIdType": "UIN",
+    "sendOtpReqTemplate": "ida/MultiFactorAuth/sendOtp",
+    "sendOtpEndPoint": "/idauthentication/v1/otp/$partnerKeyURL$",
+    },
+        "identityRequest":{
+          "bioSubType": "Right RingFinger",
+          "bioType": "Finger",
+          "bioValue": "$RIGHTRINGFINGER$",
+          "deviceCode": "bc0b6848-6d45-46d1-a9bd-b334410bf823",
+          "dateTime": "$DATETIME$",
+          "deviceProviderID": "SYNCBYTE.MC01A",
+          "deviceServiceID": "",
+          "deviceServiceVersion": "SB.WIN.001",
+          "deviceProvider": "SYNCBYTE",
+          "deviceProviderId": "SYNCBYTE.LTC165",
+          "deviceSubType": "Slap",
+          "make": "Logitech",
+          "model": "4d36e96c-e325-11ce-bfc1-08002be10318",
+          "serialNo": "78467175",
+          "type": "Finger",
+          "key": "dob",
+          "value": "1970/07/08",
+    "transactionId": "1234567890",
+    "identityRequestTemplate": "ida/MultiFactorAuth/MultiFactorIdentityEncrypt",
+    "identityRequestEncUrl": "/idauthentication/v1/internal/encrypt"
+    }
+    }'
+      output: '{
+  "authStatus": "true",
+  "sendOtpResp":{
+        "transactionID": "1234567890",
+        "maskedMobile": "XXXXXX8538",
+        "sendOtpResTemplate":"ida/MultiFactorAuth/sendOtpRes",
+        "maskedEmail": "XXkXXiXXb@technoforte.co.in"
+    }
+}'
+  auth_MultiFactorAuth_Biometric_RightMiddleFinger_With_Valid_Smoke_Pos:
+      endPoint: /idauthentication/v1/auth/$partnerKeyURL$
+      role: resident
+      restMethod: post
+      inputTemplate: ida/MultiFactorAuth/multiFactorAuth
+      outputTemplate: ida/MultiFactorAuth/multiFactorAuthResult
+      input: '{
+        "requestTime": "$TIMESTAMP$",
+        "individualId": "$ID:AddIdentity_ValidParam_smoke_Pos_UIN$",
+        "transactionId": "1234567890",
+        "individualIdType": "UIN",
+        "bio": true,
+        "demo": true,
+        "otp": true,
+        "sendOtp":{
+    "transactionID": "1234567890",
+    "requestTime": "$TIMESTAMP$",
+    "individualId": "$ID:AddIdentity_ValidParam_smoke_Pos_UIN$",
+    "individualIdType": "UIN",
+    "sendOtpReqTemplate": "ida/MultiFactorAuth/sendOtp",
+    "sendOtpEndPoint": "/idauthentication/v1/otp/$partnerKeyURL$",
+    },
+        "identityRequest":{
+          "bioSubType": "Right MiddleFinger",
+          "bioType": "Finger",
+          "bioValue": "$RIGHTMIDDLEFINGER$",
+          "deviceCode": "bc0b6848-6d45-46d1-a9bd-b334410bf823",
+          "dateTime": "$DATETIME$",
+          "deviceProviderID": "SYNCBYTE.MC01A",
+          "deviceServiceID": "",
+          "deviceServiceVersion": "SB.WIN.001",
+          "deviceProvider": "SYNCBYTE",
+          "deviceProviderId": "SYNCBYTE.LTC165",
+          "deviceSubType": "Slap",
+          "make": "Logitech",
+          "model": "4d36e96c-e325-11ce-bfc1-08002be10318",
+          "serialNo": "78467175",
+          "type": "Finger",
+          "key": "dob",
+          "value": "1970/07/08",
+    "transactionId": "1234567890",
+    "identityRequestTemplate": "ida/MultiFactorAuth/MultiFactorIdentityEncrypt",
+    "identityRequestEncUrl": "/idauthentication/v1/internal/encrypt"
+    }
+    }'
+      output: '{
+  "authStatus": "true",
+  "sendOtpResp":{
+        "transactionID": "1234567890",
+        "maskedMobile": "XXXXXX8538",
+        "sendOtpResTemplate":"ida/MultiFactorAuth/sendOtpRes",
+        "maskedEmail": "XXkXXiXXb@technoforte.co.in"
+    }
+}'
+  auth_MultiFactorAuth_Biometric_RightLittleFinger_With_Valid_Smoke_Pos:
+      endPoint: /idauthentication/v1/auth/$partnerKeyURL$
+      role: resident
+      restMethod: post
+      inputTemplate: ida/MultiFactorAuth/multiFactorAuth
+      outputTemplate: ida/MultiFactorAuth/multiFactorAuthResult
+      input: '{
+        "requestTime": "$TIMESTAMP$",
+        "individualId": "$ID:AddIdentity_ValidParam_smoke_Pos_UIN$",
+        "transactionId": "1234567890",
+        "individualIdType": "UIN",
+        "bio": true,
+        "demo": true,
+        "otp": true,
+        "sendOtp":{
+    "transactionID": "1234567890",
+    "requestTime": "$TIMESTAMP$",
+    "individualId": "$ID:AddIdentity_ValidParam_smoke_Pos_UIN$",
+    "individualIdType": "UIN",
+    "sendOtpReqTemplate": "ida/MultiFactorAuth/sendOtp",
+    "sendOtpEndPoint": "/idauthentication/v1/otp/$partnerKeyURL$",
+    },
+        "identityRequest":{
+          "bioSubType": "Right LittleFinger",
+          "bioType": "Finger",
+          "bioValue": "$RIGHTLITTLEFINGER$",
+          "deviceCode": "bc0b6848-6d45-46d1-a9bd-b334410bf823",
+          "dateTime": "$DATETIME$",
+          "deviceProviderID": "SYNCBYTE.MC01A",
+          "deviceServiceID": "",
+          "deviceServiceVersion": "SB.WIN.001",
+          "deviceProvider": "SYNCBYTE",
+          "deviceProviderId": "SYNCBYTE.LTC165",
+          "deviceSubType": "Slap",
+          "make": "Logitech",
+          "model": "4d36e96c-e325-11ce-bfc1-08002be10318",
+          "serialNo": "78467175",
+          "type": "Finger",
+          "key": "dob",
+          "value": "1970/07/08",
+    "transactionId": "1234567890",
+    "identityRequestTemplate": "ida/MultiFactorAuth/MultiFactorIdentityEncrypt",
+    "identityRequestEncUrl": "/idauthentication/v1/internal/encrypt"
+    }
+    }'
+      output: '{
+  "authStatus": "true",
+  "sendOtpResp":{
+        "transactionID": "1234567890",
+        "maskedMobile": "XXXXXX8538",
+        "sendOtpResTemplate":"ida/MultiFactorAuth/sendOtpRes",
+        "maskedEmail": "XXkXXiXXb@technoforte.co.in"
+    }
+}'
+  auth_MultiFactorAuth_Biometric_LeftThumb_With_Valid_Smoke_Pos:
+      endPoint: /idauthentication/v1/auth/$partnerKeyURL$
+      role: resident
+      restMethod: post
+      inputTemplate: ida/MultiFactorAuth/multiFactorAuth
+      outputTemplate: ida/MultiFactorAuth/multiFactorAuthResult
+      input: '{
+        "requestTime": "$TIMESTAMP$",
+        "individualId": "$ID:AddIdentity_ValidParam_smoke_Pos_UIN$",
+        "transactionId": "1234567890",
+        "individualIdType": "UIN",
+        "bio": true,
+        "demo": true,
+        "otp": true,
+        "sendOtp":{
+    "transactionID": "1234567890",
+    "requestTime": "$TIMESTAMP$",
+    "individualId": "$ID:AddIdentity_ValidParam_smoke_Pos_UIN$",
+    "individualIdType": "UIN",
+    "sendOtpReqTemplate": "ida/MultiFactorAuth/sendOtp",
+    "sendOtpEndPoint": "/idauthentication/v1/otp/$partnerKeyURL$",
+    },
+        "identityRequest":{
+          "bioSubType": "Left Thumb",
+          "bioType": "Finger",
+          "bioValue": "$LEFTTHUMB$",
+          "deviceCode": "bc0b6848-6d45-46d1-a9bd-b334410bf823",
+          "dateTime": "$DATETIME$",
+          "deviceProviderID": "SYNCBYTE.MC01A",
+          "deviceServiceID": "",
+          "deviceServiceVersion": "SB.WIN.001",
+          "deviceProvider": "SYNCBYTE",
+          "deviceProviderId": "SYNCBYTE.LTC165",
+          "deviceSubType": "Slap",
+          "make": "Logitech",
+          "model": "4d36e96c-e325-11ce-bfc1-08002be10318",
+          "serialNo": "78467175",
+          "type": "Finger",
+          "key": "dob",
+          "value": "1970/07/08",
+    "transactionId": "1234567890",
+    "identityRequestTemplate": "ida/MultiFactorAuth/MultiFactorIdentityEncrypt",
+    "identityRequestEncUrl": "/idauthentication/v1/internal/encrypt"
+    }
+    }'
+      output: '{
+  "authStatus": "true",
+  "sendOtpResp":{
+        "transactionID": "1234567890",
+        "maskedMobile": "XXXXXX8538",
+        "sendOtpResTemplate":"ida/MultiFactorAuth/sendOtpRes",
+        "maskedEmail": "XXkXXiXXb@technoforte.co.in"
+    }
+}'
+  auth_MultiFactorAuth_Biometric_RightThumb_With_Valid_Smoke_Pos:
+      endPoint: /idauthentication/v1/auth/$partnerKeyURL$
+      role: resident
+      restMethod: post
+      inputTemplate: ida/MultiFactorAuth/multiFactorAuth
+      outputTemplate: ida/MultiFactorAuth/multiFactorAuthResult
+      input: '{
+        "requestTime": "$TIMESTAMP$",
+        "individualId": "$ID:AddIdentity_ValidParam_smoke_Pos_UIN$",
+        "transactionId": "1234567890",
+        "individualIdType": "UIN",
+        "bio": true,
+        "demo": true,
+        "otp": true,
+        "sendOtp":{
+    "transactionID": "1234567890",
+    "requestTime": "$TIMESTAMP$",
+    "individualId": "$ID:AddIdentity_ValidParam_smoke_Pos_UIN$",
+    "individualIdType": "UIN",
+    "sendOtpReqTemplate": "ida/MultiFactorAuth/sendOtp",
+    "sendOtpEndPoint": "/idauthentication/v1/otp/$partnerKeyURL$",
+    },
+        "identityRequest":{
+          "bioSubType": "Right Thumb",
+          "bioType": "Finger",
+          "bioValue": "$RIGHTTHUMB$",
+          "deviceCode": "bc0b6848-6d45-46d1-a9bd-b334410bf823",
+          "dateTime": "$DATETIME$",
+          "deviceProviderID": "SYNCBYTE.MC01A",
+          "deviceServiceID": "",
+          "deviceServiceVersion": "SB.WIN.001",
+          "deviceProvider": "SYNCBYTE",
+          "deviceProviderId": "SYNCBYTE.LTC165",
+          "deviceSubType": "Slap",
+          "make": "Logitech",
+          "model": "4d36e96c-e325-11ce-bfc1-08002be10318",
+          "serialNo": "78467175",
+          "type": "Finger",
+          "key": "dob",
+          "value": "1970/07/08",
+    "transactionId": "1234567890",
+    "identityRequestTemplate": "ida/MultiFactorAuth/MultiFactorIdentityEncrypt",
+    "identityRequestEncUrl": "/idauthentication/v1/internal/encrypt"
+    }
+    }'
+      output: '{
+  "authStatus": "true",
+  "sendOtpResp":{
+        "transactionID": "1234567890",
+        "maskedMobile": "XXXXXX8538",
+        "sendOtpResTemplate":"ida/MultiFactorAuth/sendOtpRes",
+        "maskedEmail": "XXkXXiXXb@technoforte.co.in"
+    }
+}'
+  auth_MultiFactorAuth_Biometric_RightIris_With_Valid_Smoke_Pos:
+      endPoint: /idauthentication/v1/auth/$partnerKeyURL$
+      role: resident
+      restMethod: post
+      inputTemplate: ida/MultiFactorAuth/multiFactorAuth
+      outputTemplate: ida/MultiFactorAuth/multiFactorAuthResult
+      input: '{
+        "requestTime": "$TIMESTAMP$",
+        "individualId": "$ID:AddIdentity_ValidParam_smoke_Pos_UIN$",
+        "transactionId": "1234567890",
+        "individualIdType": "UIN",
+        "bio": true,
+        "demo": true,
+        "otp": true,
+        "sendOtp":{
+    "transactionID": "1234567890",
+    "requestTime": "$TIMESTAMP$",
+    "individualId": "$ID:AddIdentity_ValidParam_smoke_Pos_UIN$",
+    "individualIdType": "UIN",
+    "sendOtpReqTemplate": "ida/MultiFactorAuth/sendOtp",
+    "sendOtpEndPoint": "/idauthentication/v1/otp/$partnerKeyURL$",
+    },
+        "identityRequest":{
+          "bioSubType": "Right",
+          "bioType": "Iris",
+          "bioValue": "$RIGHTIRIS$",
+          "deviceCode": "bc0b6848-6d45-46d1-a9bd-b334410bf823",
+          "dateTime": "$DATETIME$",
+          "deviceProviderID": "SYNCBYTE.MC01A",
+          "deviceServiceID": "",
+          "deviceServiceVersion": "SB.WIN.001",
+          "deviceProvider": "SYNCBYTE",
+          "deviceProviderId": "SYNCBYTE.LTC165",
+          "deviceSubType": "Slap",
+          "make": "Logitech",
+          "model": "4d36e96c-e325-11ce-bfc1-08002be10318",
+          "serialNo": "78467175",
+          "type": "Iris",
+          "key": "dob",
+          "value": "1970/07/08",
+    "transactionId": "1234567890",
+    "identityRequestTemplate": "ida/MultiFactorAuth/MultiFactorIdentityEncrypt",
+    "identityRequestEncUrl": "/idauthentication/v1/internal/encrypt"
+    }
+    }'
+      output: '{
+  "authStatus": "true",
+  "sendOtpResp":{
+        "transactionID": "1234567890",
+        "maskedMobile": "XXXXXX8538",
+        "sendOtpResTemplate":"ida/MultiFactorAuth/sendOtpRes",
+        "maskedEmail": "XXkXXiXXb@technoforte.co.in"
+    }
+}'
+  auth_MultiFactorAuth_Biometric_LeftIris_With_Valid_Smoke_Pos:
+      endPoint: /idauthentication/v1/auth/$partnerKeyURL$
+      role: resident
+      restMethod: post
+      inputTemplate: ida/MultiFactorAuth/multiFactorAuth
+      outputTemplate: ida/MultiFactorAuth/multiFactorAuthResult
+      input: '{
+        "requestTime": "$TIMESTAMP$",
+        "individualId": "$ID:AddIdentity_ValidParam_smoke_Pos_UIN$",
+        "transactionId": "1234567890",
+        "individualIdType": "UIN",
+        "bio": true,
+        "demo": true,
+        "otp": true,
+        "sendOtp":{
+    "transactionID": "1234567890",
+    "requestTime": "$TIMESTAMP$",
+    "individualId": "$ID:AddIdentity_ValidParam_smoke_Pos_UIN$",
+    "individualIdType": "UIN",
+    "sendOtpReqTemplate": "ida/MultiFactorAuth/sendOtp",
+    "sendOtpEndPoint": "/idauthentication/v1/otp/$partnerKeyURL$",
+    },
+        "identityRequest":{
+          "bioSubType": "Left",
+          "bioType": "Iris",
+          "bioValue": "$LEFTIRIS$",
+          "deviceCode": "bc0b6848-6d45-46d1-a9bd-b334410bf823",
+          "dateTime": "$DATETIME$",
+          "deviceProviderID": "SYNCBYTE.MC01A",
+          "deviceServiceID": "",
+          "deviceServiceVersion": "SB.WIN.001",
+          "deviceProvider": "SYNCBYTE",
+          "deviceProviderId": "SYNCBYTE.LTC165",
+          "deviceSubType": "Slap",
+          "make": "Logitech",
+          "model": "4d36e96c-e325-11ce-bfc1-08002be10318",
+          "serialNo": "78467175",
+          "type": "Iris",
+          "key": "dob",
+          "value": "1970/07/08",
+    "transactionId": "1234567890",
+    "identityRequestTemplate": "ida/MultiFactorAuth/MultiFactorIdentityEncrypt",
+    "identityRequestEncUrl": "/idauthentication/v1/internal/encrypt"
+    }
+    }'
+      output: '{
+  "authStatus": "true",
+  "sendOtpResp":{
+        "transactionID": "1234567890",
+        "maskedMobile": "XXXXXX8538",
+        "sendOtpResTemplate":"ida/MultiFactorAuth/sendOtpRes",
+        "maskedEmail": "XXkXXiXXb@technoforte.co.in"
+    }
+}'
